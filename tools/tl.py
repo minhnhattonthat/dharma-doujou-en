@@ -171,7 +171,7 @@ def merge():
         for e in items:
             e["en"] = by_id.get(e["id"], "")  # en.tsv is the only source of "en"
         (ROOT / "script" / f"{block}.json").write_text(json.dumps(items, ensure_ascii=False, indent=1) + "\n",
-                                                      encoding="utf-8")
+                                                      encoding="utf-8", newline="\n")
     errs, warns = lint.run()
     print("\n".join(errs))
     print(f"tl: merged {sum(map(len, out.values()))} strings; lint {len(errs)} errors, {len(warns)} guessed-box warnings")
