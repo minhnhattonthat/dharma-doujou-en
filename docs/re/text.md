@@ -28,7 +28,7 @@ All verified 2026-10-26 on the original ROM (Mesen watch on the BG3 map buffer, 
 - A narrow glyph is 8 px, so 26 narrow characters per line.
 
 ## Engine 2: BG1/BG2 screens (tutorial, quiz mode, ranks; verified: decoded all 98, roundtrip exact)
-- Table **$84:DA42** (file 0x25A42), 98 16-bit pointers into bank $84; strings 0x25B06 - 0x26097. Table `tbl/jp2.tbl`.
+- Table **$84:DA42** (file 0x25A42), 98 16-bit pointers into bank $84; strings 0x25B06 - 0x2609B (zeros follow). Table `tbl/jp2.tbl`.
 - Draw routines: `$84:D94C` (to the BG1 map buffer $7E4000) and `$84:D982` (BG2 map buffer $7E5000); string id `$0238`,
   column `$023A`, row `$023C`; palette/priority `$1800` (BG1 via `#$2000|$1800`). Draws the whole string at once.
 - Words: `0000|N` 16x16 glyph tiles N, N+1 / N+16, N+17 (4bpp font laid out 16 tiles wide); `2000|N` narrow 8x16
