@@ -1,0 +1,6 @@
+# boot to title, open main menu
+1500 -
+4 start
+200 -
+4 start
+200 -

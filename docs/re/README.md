@@ -8,8 +8,13 @@ proven, so a later session doesn't build on a guess:
 - **guess** - and why it seems likely (byte pattern, another game, an earlier patch's notes). Promote it to verified
   before code depends on it.
 
-Addresses are for the dump in `rom.sha1` unless a note says otherwise.
+Addresses are for the dump in `rom.sha1` unless a note says otherwise. Header: LoROM, FastROM ($FFD5 = $30), 1 MB.
 
 | File | Covers | State |
 |---|---|---|
-| <text.md> | <encoding, control codes, pointer tables> | <verified / partly guessed> |
+| text.md | both text engines: encoding, control codes, pointer tables, box size, fonts | verified (roundtrip) |
+| graphics.md | RLE compression, resource table, free space, graphics-text survey | compression verified; survey partial |
+
+Gotchas:
+- Text is 16-bit tile codes, not bytes: `relsearch.py` finds nothing. Trace the BG map buffer writer instead.
+- Mesen run timing drifts between runs (random SRAM / RNG): wait on screens, not frame counts.
