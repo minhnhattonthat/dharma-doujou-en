@@ -14,7 +14,9 @@ Addresses are for the dump in `rom.sha1` unless a note says otherwise. Header: L
 |---|---|---|
 | text.md | both text engines: encoding, control codes, pointer tables, box size, fonts | verified (roundtrip) |
 | graphics.md | RLE compression, resource table, free space, graphics-text survey | compression verified; survey partial |
+| debug.md | scene state machine ($17/$19), stage/quiz/menu RAM, how each warp works | verified (warps) |
 
 Gotchas:
 - Text is 16-bit tile codes, not bytes: `relsearch.py` finds nothing. Trace the BG map buffer writer instead.
 - Mesen run timing drifts between runs (random SRAM / RNG): wait on screens, not frame counts.
+- Pad 2 can't be driven with `emu.setInput` under `--testRunner` (lands on pad 1); warp.lua fakes $421A reads.
