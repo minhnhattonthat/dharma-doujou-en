@@ -23,6 +23,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 import bps  # noqa: E402
 import check_rom  # noqa: E402
 import font  # noqa: E402
+import gfx  # noqa: E402
 import romdiff  # noqa: E402
 from text import Codec  # noqa: E402
 
@@ -75,7 +76,7 @@ def pack(rom, block, strings):
         lang, s = s if isinstance(s, tuple) else ("jp", s)
         if lang not in codecs:
             codecs[lang] = font.codec(name)
-        enc = codecs[lang].encode(s)
+        enc = codecs[lang].encode(font.ligate(name, s) if lang != "jp" else s)
         for lo, hi, blob in regions:
             if lo + len(blob) + len(enc) <= hi:
                 ptrs.append(lo + len(blob) - base + 0x8000)
@@ -150,7 +151,9 @@ def build(orig, out=OUT, texts=None):
         english |= any(isinstance(s, tuple) and s[0] != "jp" for s in strings)
         pack(rom, block, strings)
     if english:
-        font.patch(rom, rom.put)
+        free = list(font.FREE)
+        font.patch(rom, rom.put, free)
+        gfx.patch(rom, rom.put, free)
     data, _ = bps.snes_checksum(rom.data)
     rom.put(0x7FDC, data[0x7FDC:0x7FE0], "checksum")
     out.parent.mkdir(exist_ok=True)

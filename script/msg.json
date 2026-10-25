@@ -57,14 +57,14 @@
   "id": 9,
   "ptr": "12874",
   "jp": "直感…スピード勝負{nl}{nl}{nl} [6330] [6339] [6342] [634B]{end}",
-  "en": "Speed and instinct!{nl}{nl}{nl} [6330] [6339] [6342] [634B]{end}",
+  "en": "Speed and instinct!{nl}{nl}{nl}  [6330][6339]  [6342][634B]{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 10,
   "ptr": "1289E",
   "jp": "じっくりと、読み勝負{nl}{nl}{nl} [6354] [635D] [6342] [634B]{end}",
-  "en": "Calm and foresight!{nl}{nl}{nl} [6354] [635D] [6342] [634B]{end}",
+  "en": "Calm and foresight!{nl}{nl}{nl}  [6354][635D]  [6342][634B]{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
@@ -138,56 +138,56 @@
   "id": 22,
   "ptr": "12DA8",
   "jp": "STAGE 1{nl}{nl}     [6366]  [636F]{end}",
-  "en": "",
+  "en": "STAGE 1{nl}{nl}{nl}     Kamakura{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 23,
   "ptr": "12DCE",
   "jp": "STAGE 2{nl}{nl}     [6378]  [6381]{end}",
-  "en": "",
+  "en": "STAGE 2{nl}{nl}{nl}      Hakone{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 24,
   "ptr": "12DF4",
   "jp": "STAGE 3{nl}{nl}     [638A]  [6393]{end}",
-  "en": "",
+  "en": "STAGE 3{nl}{nl}{nl}    Hamamatsu{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 25,
   "ptr": "12E1A",
   "jp": "STAGE 4{nl}{nl}     [639C]  [63A5]{end}",
-  "en": "",
+  "en": "STAGE 4{nl}{nl}{nl}       Ise{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 26,
   "ptr": "12E40",
   "jp": "STAGE 5{nl}{nl}     [639C]  [63AE]{end}",
-  "en": "",
+  "en": "STAGE 5{nl}{nl}{nl}       Iga{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 27,
   "ptr": "12E66",
   "jp": "STAGE 6{nl}{nl}     [63B7]  [63C0]{end}",
-  "en": "",
+  "en": "STAGE 6{nl}{nl}{nl}       Nara{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 28,
   "ptr": "12E8C",
   "jp": "STAGE 7{nl}{nl}     [63C9]  [63D2]{end}",
-  "en": "",
+  "en": "STAGE 7{nl}{nl}{nl}      Osaka{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 29,
   "ptr": "12EB2",
   "jp": "STAGE 8{nl}{nl}     [63DB]  [63E4]{end}",
-  "en": "",
+  "en": "STAGE 8{nl}{nl}{nl}      Kyoto{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {

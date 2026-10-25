@@ -11,5 +11,17 @@
 38066-3806B   resource table entries 34-35 (engine 2 font)
 391DB-3CE88   resources 1-4: engine 1 font, recompressed in place
 63A55-6654B   resources 34-35: engine 2 font, recompressed in place
+38000-380F8   resource table, for a graphics resource that moves to free space (tools/gfx.py)
+30000-3117A   resource 80: 2P record header scroll (G17)
+3117B-32CAD   resource 81: options header plate (G6)
+42F18-442DD   resource 8: stack warning banner (G12)
+68000-69C4B   resource 36: continue / difficulty plates (G4, G5)
+69C4C-6AF17   resource 37: story HUD, pause, countdown (G7)
+89D4C-8B073   resource 63: best-of banner (G13)
+8B074-8C137   resource 64: quiz HUD (G7)
+8D6A6-8E3D4   resource 67: attract release date (G14)
+9E491-9F465   resource 77: victory (G13)
+CA000-CAFFF   raw OBJ tiles: よーい / どん round-start call (G19)
+CC000-CDA37   resource 78: full mastery plates (G9)
 E2E90-E7FFF   free space for a font resource that outgrows its slot
 F5130-F7FFF   free space for a font resource that outgrows its slot

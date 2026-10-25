@@ -10,8 +10,8 @@ msg:5	Options
 msg:6	New Game
 msg:7	Password
 msg:8	Who will you play as?
-msg:9	Speed and instinct!
-msg:10	Calm and foresight!
+msg:9	Speed and instinct!{nl}{nl}{nl}  [6330][6339]  [6342][634B]
+msg:10	Calm and foresight!{nl}{nl}{nl}  [6354][635D]  [6342][634B]
 msg:11	Password
 msg:12	See you again!
 msg:13	Incorrect
@@ -34,6 +34,15 @@ msg:18.1	When the shrine maiden / heard of this, not to be
 msg:18.2	outdone, she set off after / the young monk, they say.
 msg:19.1	Many ups and downs await. / How will it all turn out?
 msg:20	The End
+# Stage cards (G3): the place names were 24x24 kanji pictures; English in the text font on the card's next line
+msg:22	STAGE 1{nl}{nl}{nl}     Kamakura
+msg:23	STAGE 2{nl}{nl}{nl}      Hakone
+msg:24	STAGE 3{nl}{nl}{nl}    Hamamatsu
+msg:25	STAGE 4{nl}{nl}{nl}       Ise
+msg:26	STAGE 5{nl}{nl}{nl}       Iga
+msg:27	STAGE 6{nl}{nl}{nl}       Nara
+msg:28	STAGE 7{nl}{nl}{nl}      Osaka
+msg:29	STAGE 8{nl}{nl}{nl}      Kyoto
 # Quiz certificate: rank names are drawn at column 11 of the rows "Level " and "Rank: " (6 columns, nothing after)
 msg:30	   Certificate of Rank{nl}{nl}{nl}Passed the Daruma Way{nl}{nl}Exam: {nl}{nl}{nl}Rank:
 msg:31	Novice

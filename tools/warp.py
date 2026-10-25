@@ -4,7 +4,7 @@
     python -X utf8 tools/warp.py --all --save --jobs 3     # regenerate every work/states/<scene>.mss
     python -X utf8 tools/warp.py --list
 
-Output: work/qa/warp/<scene>/<scene>.png (+ sheet with --shot-every). --save writes work/states/<scene>.mss.
+Output: work/qa/warp/<scene>/<scene>.png (+ sheet with --shot-every; --out moves the root). --save writes work/states/<scene>.mss.
 ROM default: build/dharma_en.sfc if it exists, else the original. Exit 1 if any scene was not reached.
 """
 import argparse
@@ -32,7 +32,7 @@ def scene_names():
 
 
 def run(scene, a):
-    out = os.path.join(ROOT, "work", "qa", "warp", scene)
+    out = os.path.join(a.out, scene)
     os.makedirs(out, exist_ok=True)
     cmd = [sys.executable, "-X", "utf8", os.path.join(SKILL, "scripts", "emu.py"), a.rom, "--out", out,
            "--script", os.path.join(DBG, "scenes.lua"), "--script", os.path.join(DBG, "warp.lua"),
@@ -46,6 +46,8 @@ def run(scene, a):
         cmd += ["--var", f"AFTER_MASH={a.mash}"]
     for s in a.script:
         cmd += ["--script", s]
+    for v in a.var:
+        cmd += ["--var", v]
     if a.shot_every:
         cmd += ["--shot-every", str(a.shot_every), "--sheet"]
     p = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -62,6 +64,7 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--rom", default=BUILT if os.path.exists(BUILT) else ORIG)
+    ap.add_argument("--out", default=os.path.join(ROOT, "work", "qa", "warp"), help="one folder per scene in here")
     ap.add_argument("--save", action="store_true", help="write work/states/<scene>.mss")
     ap.add_argument("--hold", type=int, default=60, help="frames to wait after arrival before the shot")
     ap.add_argument("--frames", type=int, default=20000, help="timeout in frames")
@@ -69,6 +72,7 @@ def main():
     ap.add_argument("--mash", type=int, default=0, help="after arrival, press A every N frames during --hold")
     ap.add_argument("--jobs", type=int, default=3)
     ap.add_argument("--script", action="append", default=[], help="extra Lua probe, e.g. tools/debug/freetrap.lua")
+    ap.add_argument("--var", action="append", default=[], help="NAME=LUA global for the extra scripts")
     a = ap.parse_args()
     names = scene_names()
     if a.list:

@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
+import gfx  # noqa: E402
 import rle  # noqa: E402
 from text import Codec  # noqa: E402
 
@@ -30,21 +31,64 @@ ENGINES = {
 }
 
 
-def glyphs():
-    """{char: 16 rows of 8 pixels, 0 blank / 1 ink / 2 shadow} from the source file."""
+COND = ROOT / "fonts" / "en_cond.txt"
+# words drawn with the condensed glyphs into a fixed number of cells, then blank cells up to the word's length,
+# when a whole string is the word: the quiz rank plate shows 4 cells of strings 52-56 (docs/re/windows.md)
+LIGATURES = {"screen": (("Novice", "Sensei", "Expert", "Master", "Legend"), 4)}
+
+
+def parse(src, width=7):
+    """{char: 13 rows of ink bits} from a glyph file; width=None allows any width, the same in every row."""
     out, name, rows = {}, None, []
-    lines = SRC.read_text(encoding="utf-8").splitlines() + ["== "]
+    lines = src.read_text(encoding="utf-8").splitlines() + ["== "]
     for n, line in enumerate(lines, 1):
         if line.startswith("== "):
             if name is not None:
-                assert len(rows) == 13, f"{SRC.name}: glyph {name!r} has {len(rows)} rows, want 13"
-                out[name] = shade([[0] * 8] * 2 + rows + [[0] * 8])
+                assert len(rows) == 13, f"{src.name}: glyph {name!r} has {len(rows)} rows, want 13"
+                assert len({len(r) for r in rows}) == 1, f"{src.name}: glyph {name!r} rows differ in width"
+                out[name] = rows
             name, rows = line[3:], []
-            assert name not in out, f"{SRC.name}:{n}: duplicate glyph {name!r}"
+            assert name not in out, f"{src.name}:{n}: duplicate glyph {name!r}"
         elif line and not line.startswith("# "):  # glyph rows start with '#' too, comments with '# '
-            assert len(line) == 7 and set(line) <= set(".#"), f"{SRC.name}:{n}: want 7 of '.#', got {line!r}"
-            rows.append([int(c == "#") for c in line] + [0])
+            assert (width is None or len(line) == width) and set(line) <= set(".#"), \
+                f"{src.name}:{n}: want {width or 'some'} of '.#', got {line!r}"
+            rows.append([int(c == "#") for c in line])
     return out
+
+
+def glyphs():
+    """{char: 16 rows of 8 pixels, 0 blank / 1 ink / 2 shadow} from the source file."""
+    return {ch: shade([[0] * 8] * 2 + [r + [0] for r in rows] + [[0] * 8]) for ch, rows in parse(SRC).items()}
+
+
+def ligature_cells(engine):
+    """{private char: 16 rows of 8 pixels} for each cell of each ligature word, and {word: its private chars}."""
+    words, cells = LIGATURES.get(engine, ((), 0))
+    cond = parse(COND, None)
+    out, spell, code = {}, {}, 0xE000
+    for word in words:
+        cols = []
+        for ch in word:
+            cols += [[cond[ch][y][x] for y in range(13)] for x in range(len(cond[ch][0]))] + [[0] * 13]
+        cols.pop()
+        assert len(cols) <= 8 * cells - 2, f"{word}: {len(cols)} px, over {cells} cells"
+        left = (8 * cells - len(cols)) // 2
+        cols = [[0] * 13] * left + cols + [[0] * 13] * (8 * cells - left - len(cols))
+        spell[word] = ""
+        for c in range(cells):
+            rows = [[cols[8 * c + x][y] for x in range(8)] for y in range(13)]
+            out[chr(code)] = [[0] * 8] * 2 + rows + [[0] * 8]
+            spell[word] += chr(code)
+            code += 1
+        spell[word] += " " * (len(word) - cells)
+    return out, spell
+
+
+def ligate(engine, s):
+    """s with a whole-string ligature word swapped for its cells (the {end} after it kept)."""
+    word, end = (s[:-5], s[-5:]) if s.endswith("{end}") else (s, "")
+    spell = ligature_cells(engine)[1]
+    return spell[word] + end if word in spell else s
 
 
 def shade(rows):
@@ -111,6 +155,7 @@ def engine_glyphs(engine):
     gl = glyphs()
     if engine == "screen":
         gl[" "] = [[0] * 8 for _ in range(16)]
+    gl.update(ligature_cells(engine)[0])
     return gl
 
 
@@ -137,12 +182,12 @@ def codec(engine):
     return Codec(table_lines(engine))
 
 
-def patch(rom, put):
-    """Draw the English glyphs into both engines' font resources in rom (a Rom from build.py)."""
-    free = list(FREE)
+def patch(rom, put, free):
+    """Draw the English glyphs into both engines' font resources in rom (a Rom from build.py); free: list of
+    (start, end) file ranges, shared with tools/gfx.py, used up as resources move."""
     for engine, (_, resources, size, step) in ENGINES.items():
         gl = engine_glyphs(engine)
-        data = {r: bytearray(rle.decode(rom.orig, r)[0]) for r, _ in resources}
+        data = {r: bytearray(gfx.base(rom.orig, r)) for r, _ in resources}  # picture redraws (G2) first
         for ch, code in assign(engine).items():
             n = code & 0x1FFF
             for t, rows in ((n, gl[ch][:8]), (n + step, gl[ch][8:])):

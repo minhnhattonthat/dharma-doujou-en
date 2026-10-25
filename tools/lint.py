@@ -26,7 +26,7 @@ BOXES = {
     "story": (26, 2, "measured"),        # narration box, story intro / outros / ending
     "intro": (25, 1, "measured"),        # msg 14 box
     "subtitle": (19, 1, "measured"),     # msg 9/10 under the mode pictures, runs to the screen edge
-    "stage": (19, 1, "measured"),        # STAGE n line on the stage card
+    "stage": (19, 2, "measured"),        # STAGE n line + the place name line (G3) on the stage card
     "master": (15, 2, "measured"),       # msg 36 bubble (its clears are {rep:0F} = 15)
     "choice": (8, 2, "measured"),        # msg 56 continue / quit box
     "quiz": (20, 1, "measured"),         # engine-2 quiz bubble (border at column 21)
@@ -85,8 +85,11 @@ LAYOUT = Counter({k: 999 for k in ["{nl}", "{page}", "{key}"] + [f"{{rep:{n:02X}
                   + [f"{{sp{n}}}" for n in range(10)] + [f"{{down:{n:02X}}}" for n in range(256)]})
 
 
+PICTURE = re.compile(r"\[[67][0-9A-Fa-f]{3}\]")  # engine-1 24x24 pictures: content, may be dropped (G3)
+
+
 def controls(text):
-    return Counter(CONTROL.findall(text))
+    return Counter(c for c in CONTROL.findall(text) if not PICTURE.fullmatch(c))
 
 
 def check(block, e, codec):

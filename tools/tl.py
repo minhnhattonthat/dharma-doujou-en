@@ -30,9 +30,8 @@ NL = {"story": "{nl}{nl}{nl}", "master": "{nl}{nl}"}
 PREFIX = re.compile(r"^((?:\{page\}|\{mode:[0-9A-F]{2}\})*)")
 SUFFIX = re.compile(r"((?:\{key\})?(?:\{page\})*\{end\})?$")
 MODE = re.compile(r"\{mode:[0-9A-F]{2}\}")
-# kept as the JP: digits drawn by index, debug title, STAGE n cards (English already; pictures are graphics), credits
-# except the EXECTIVE typo, an empty string
-KEEP = {"msg": set(range(21, 22)) | set(range(22, 30)) | set(range(38, 48)) | set(range(65, 91)),
+# kept as the JP: digits drawn by index, debug title, credits except the EXECTIVE typo, an empty string
+KEEP = {"msg": set(range(21, 22)) | set(range(38, 48)) | set(range(65, 91)),
         "screen": set(range(0, 10)) | {26}}
 
 
@@ -156,7 +155,9 @@ def compose(tr):
                 if block == "screen" and slot_cols(en, None) != slot_cols(jp, jp2):
                     errs.append(f"{block}:{i}: {{sp4}} slots at columns {slot_cols(en, None)}, JP has them at "
                                 f"{slot_cols(jp, jp2)} (the code draws there)")
-                tail = jp[jp.index("{nl}"):-len("{end}")] if block == "msg" and i in (9, 10) else ""
+                # msg 9/10 keep the JP picture tail unless en.tsv gives its own (G2: the pictures redrawn as words)
+                tail = jp[jp.index("{nl}"):-len("{end}")] if block == "msg" and i in (9, 10) and "{nl}" not in en \
+                    else ""
                 out[block][i] = en + tail + "{end}"
     return errs, out
 
