@@ -3,8 +3,9 @@
 Each text block is unpacked to strings and repacked: strings laid out in id order from the block start, identical
 strings stored once, the pointer table rewritten. Every write goes through put() and is logged to build/writes.txt
 with the original bytes it replaces, then romdiff checks the result. With no edits the output equals the original
-(tests/test_build.py, the identity build).
+(tests/test_build.py, the identity build). Text comes from script/<block>.json (tools/dump.py writes it).
 """
+import json
 import struct
 import sys
 from pathlib import Path
@@ -16,8 +17,9 @@ import check_rom  # noqa: E402
 import romdiff  # noqa: E402
 from text import Codec  # noqa: E402
 
+LANG = "en"  # target language: the script field read and the output name
 ORIG_ROM = ROOT / "rom" / "Dharma Doujou (Japan).sfc"
-OUT = ROOT / "build" / "dharma_en.sfc"
+OUT = ROOT / "build" / f"dharma_{LANG}.sfc"
 
 # name, table, pointer table (file offset), entries, file offset of the bank's $8000, text start, text end (exclusive)
 BLOCKS = [
@@ -66,6 +68,17 @@ def pack(rom, block, strings):
     rom.put(start, bytes(blob), f"{name}-text")
 
 
+def load_script(lang=LANG):
+    """{block name: strings by id} from script/<block>.json: the lang field, else jp (untranslated)."""
+    texts = {}
+    for block in BLOCKS:
+        items = json.loads((ROOT / "script" / f"{block[0]}.json").read_text(encoding="utf-8"))
+        if [e["id"] for e in items] != list(range(block[3])):
+            sys.exit(f"script/{block[0]}.json: ids must be 0..{block[3] - 1} in order")
+        texts[block[0]] = [e.get(lang) or e["jp"] for e in items]
+    return texts
+
+
 def build(orig, out=OUT, texts=None):
     """texts: {block name: strings by id}; a block not given is repacked from the original."""
     rom = Rom(orig)
@@ -86,5 +99,5 @@ def build(orig, out=OUT, texts=None):
 if __name__ == "__main__":
     check_rom.check()
     import hashlib
-    data = build(ORIG_ROM.read_bytes())
+    data = build(ORIG_ROM.read_bytes(), texts=load_script())
     print(f"{OUT.relative_to(ROOT)}: sha1 {hashlib.sha1(data).hexdigest()}")

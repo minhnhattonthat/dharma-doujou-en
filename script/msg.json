@@ -1,0 +1,610 @@
+[
+ {
+  "id": 0,
+  "ptr": "127E4",
+  "jp": "だるま道中記{end}",
+  "en": ""
+ },
+ {
+  "id": 1,
+  "ptr": "127F2",
+  "jp": "だるま修行編{end}",
+  "en": ""
+ },
+ {
+  "id": 2,
+  "ptr": "12800",
+  "jp": "だるま問答{end}",
+  "en": ""
+ },
+ {
+  "id": 3,
+  "ptr": "1280C",
+  "jp": "ふたりで対決{end}",
+  "en": ""
+ },
+ {
+  "id": 4,
+  "ptr": "1281A",
+  "jp": "だるま入門編{end}",
+  "en": ""
+ },
+ {
+  "id": 5,
+  "ptr": "12828",
+  "jp": "おぷしょん{end}",
+  "en": ""
+ },
+ {
+  "id": 6,
+  "ptr": "12834",
+  "jp": "は じ め か ら{end}",
+  "en": ""
+ },
+ {
+  "id": 7,
+  "ptr": "12848",
+  "jp": "ぱ す わ ー ど{end}",
+  "en": ""
+ },
+ {
+  "id": 8,
+  "ptr": "1285C",
+  "jp": "どっちでプレイするの?{end}",
+  "en": ""
+ },
+ {
+  "id": 9,
+  "ptr": "12874",
+  "jp": "直感…スビード勝負{nl}{nl}{nl} [6330] [6339] [6342] [634B]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 10,
+  "ptr": "1289E",
+  "jp": "じっくりと、読み勝負{nl}{nl}{nl} [6354] [635D] [6342] [634B]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 11,
+  "ptr": "128CA",
+  "jp": "ぱ す わ ー ど{end}",
+  "en": ""
+ },
+ {
+  "id": 12,
+  "ptr": "128DE",
+  "jp": "またあそんでね{end}",
+  "en": ""
+ },
+ {
+  "id": 13,
+  "ptr": "128EE",
+  "jp": "ち が い ま す{end}",
+  "en": ""
+ },
+ {
+  "id": 14,
+  "ptr": "12902",
+  "jp": "遠い遠いむかしのお話じゃ{end}",
+  "en": ""
+ },
+ {
+  "id": 15,
+  "ptr": "1291C",
+  "jp": "{mode:01}村々を結ぶ街道に化物たちが{nl}{nl}{nl}悪霊の置き物を、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}高く積み上げて民の往来を、{nl}{nl}{nl}じゃましておったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}",
+  "en": ""
+ },
+ {
+  "id": 16,
+  "ptr": "129B0",
+  "jp": "{mode:01}時おなじ頃、 鎌倉に{nl}{nl}{nl}若いがちえのある小坊主と{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}神通力のすぐれたうつくしい{nl}{nl}{nl}巫女がおったそうで、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}二人はおさない頃より{nl}{nl}{nl}ことあるごとに何かと{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}競いあって、 大きく{nl}{nl}{nl}なったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}",
+  "en": ""
+ },
+ {
+  "id": 17,
+  "ptr": "12AC0",
+  "jp": "ある日のこと。    {nl}{nl}{nl}おしょうさまと村人たちが{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}悪霊の置物と化物の{nl}{nl}{nl}うわさ話をしているのを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}うしろでこっそりきいていた{nl}{nl}{nl}{mode:01}小坊主が、 だしぬけに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「みなさん!!  わたしが{nl}{nl}{nl}その化物どもを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}まとめて退治して{nl}{nl}{nl}さしあげましょう!!」と、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}いうやいなやおしょうさまが{nl}{nl}{nl}とめるのもきかずに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}修行をかねて悪霊退治の{nl}{nl}{nl}旅へとくりだしたのである。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}",
+  "en": ""
+ },
+ {
+  "id": 18,
+  "ptr": "12CAE",
+  "jp": "これを知らされた{nl}{nl}{nl}巫女もまけじとばかりに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{page}{mode:01}小坊主のあとを{nl}{nl}{nl}おいかけていったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 19,
+  "ptr": "12D34",
+  "jp": "道中やまあり、たにあり、{nl}{nl}{nl}はてさてどうなることやら{end}",
+  "en": ""
+ },
+ {
+  "id": 20,
+  "ptr": "12D6C",
+  "jp": "お  し  ま  い{end}",
+  "en": ""
+ },
+ {
+  "id": 21,
+  "ptr": "12D82",
+  "jp": "DATA CHECK UTILITY{end}",
+  "en": "",
+  "note": "already English (debug screen)"
+ },
+ {
+  "id": 22,
+  "ptr": "12DA8",
+  "jp": "STAGE 1{nl}{nl}     [6366]  [636F]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 23,
+  "ptr": "12DCE",
+  "jp": "STAGE 2{nl}{nl}     [6378]  [6381]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 24,
+  "ptr": "12DF4",
+  "jp": "STAGE 3{nl}{nl}     [638A]  [6393]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 25,
+  "ptr": "12E1A",
+  "jp": "STAGE 4{nl}{nl}     [639C]  [63A5]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 26,
+  "ptr": "12E40",
+  "jp": "STAGE 5{nl}{nl}     [639C]  [63AE]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 27,
+  "ptr": "12E66",
+  "jp": "STAGE 6{nl}{nl}     [63B7]  [63C0]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 28,
+  "ptr": "12E8C",
+  "jp": "STAGE 7{nl}{nl}     [63C9]  [63D2]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 29,
+  "ptr": "12EB2",
+  "jp": "STAGE 8{nl}{nl}     [63DB]  [63E4]{end}",
+  "en": "",
+  "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
+ },
+ {
+  "id": 30,
+  "ptr": "12ED8",
+  "jp": "  段  位  認  定  状{nl}{nl}{nl}{nl}{nl}達磨道    を卒業する事を{nl}{nl}{nl}認め、     の段位を授ける{end}",
+  "en": ""
+ },
+ {
+  "id": 31,
+  "ptr": "12F42",
+  "jp": "入門{end}",
+  "en": ""
+ },
+ {
+  "id": 32,
+  "ptr": "12F48",
+  "jp": "師範{end}",
+  "en": ""
+ },
+ {
+  "id": 33,
+  "ptr": "12F4E",
+  "jp": "名人{end}",
+  "en": ""
+ },
+ {
+  "id": 34,
+  "ptr": "12F54",
+  "jp": "達人{end}",
+  "en": ""
+ },
+ {
+  "id": 35,
+  "ptr": "12F5A",
+  "jp": "道主{end}",
+  "en": ""
+ },
+ {
+  "id": 36,
+  "ptr": "12F60",
+  "jp": "とうとうわしを{nl}{nl}こえよったな。{key}{page}{rep:0F} {nl}{nl}{rep:0F} {page}免許皆伝じゃ。{nl}{nl}おめでとう。{key}{end}",
+  "en": ""
+ },
+ {
+  "id": 37,
+  "ptr": "12FB4",
+  "jp": " 1P{rep:15} 2P{nl}{nl}{nl} {rep:04} 勝   負{rep:04}  {rep:04} 勝   負{end}",
+  "en": ""
+ },
+ {
+  "id": 38,
+  "ptr": "12FEE",
+  "jp": "0{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 39,
+  "ptr": "12FF2",
+  "jp": "1{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 40,
+  "ptr": "12FF6",
+  "jp": "2{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 41,
+  "ptr": "12FFA",
+  "jp": "3{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 42,
+  "ptr": "12FFE",
+  "jp": "4{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 43,
+  "ptr": "13002",
+  "jp": "5{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 44,
+  "ptr": "13006",
+  "jp": "6{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 45,
+  "ptr": "1300A",
+  "jp": "7{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 46,
+  "ptr": "1300E",
+  "jp": "8{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 47,
+  "ptr": "13012",
+  "jp": "9{end}",
+  "en": "",
+  "note": "digit drawn by index; keep"
+ },
+ {
+  "id": 48,
+  "ptr": "13016",
+  "jp": "この二人、 なかがよいのやら{nl}{nl}{nl}わるいのやら…………。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}あかおにをいともかんたんに{nl}{nl}{nl}退治したあと、 われさきにと{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}競いあって、 鎌倉をあとに{nl}{nl}{nl}したそうな{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 49,
+  "ptr": "130F2",
+  "jp": "「こらっー!! まちなさい!!」{nl}{nl}{nl}「おにぎりをかえせーっっ!!」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}つたえられておる お話では、{nl}{nl}{nl}二人はとらえたねこまたを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}かいしんさせて、 もっていた{nl}{nl}{nl}おにぎりをわけあたえてやり{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}にがしてやったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 50,
+  "ptr": "13214",
+  "jp": "こわれたからくりだるまの{nl}{nl}{nl}なかからでてきたのは、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}小さくてかわいらしい{nl}{nl}{nl}ゆうれいじゃったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「きゃーっ! かわいい。{nl}{nl}{nl}ほんとうに悪霊なの?」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「どうやら化物達に、りよう{nl}{nl}{nl}されていたみたいだな。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}二人はゆうれいをはなして{nl}{nl}{nl}やると、 村人達にあとで{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}きにしばっているあおおにを{nl}{nl}{nl}にがしてやるようにたのみ、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}村をあとにしたそうじゃ。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「あおおにはどうしましょ?」{nl}{nl}{nl}「ほっとけ、ほっとけ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 51,
+  "ptr": "1344A",
+  "jp": "いままでのおこないを{nl}{nl}{nl}ふかくはんせいしたかっぱは、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}うみでさかなをとって{nl}{nl}{nl}ごちそうしてくれたそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「いただきまーす。」{nl}{nl}{nl}「あっ だめよ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「わたしのぶんものこして{nl}{nl}{nl}おいてよ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 52,
+  "ptr": "1355C",
+  "jp": "「これじゃあまるでわたし達が{nl}{nl}{nl}いじめたみたいじゃない?」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「うーん・・・、まいったなぁ。{nl}{nl}{nl}おにぎりもとりかえしたし、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}さきをいそごうか?」{nl}{nl}{nl}「いきましょう。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}いぜんもらったおにぎりの{nl}{nl}{nl}おかえしにと、さしだされた{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}おにぎりをうけとって、{nl}{nl}{nl}ねこまたのきょうだいに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}みおくられながら小坊主達は{nl}{nl}{nl}さきをいそいだそうじゃ。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 53,
+  "ptr": "1371E",
+  "jp": "「あの二人、 またおいら達の{nl}{nl}{nl}さかなをくっちゃった………」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}二ひきのかっぱは、{nl}{nl}{nl}小坊主達のうしろすがたを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}なごりおしそうに、ずっと{nl}{nl}{nl}みつめておったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 54,
+  "ptr": "137FE",
+  "jp": "すっかりなかよくなった{nl}{nl}{nl}さんにんは、ほしがでるまで{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}かたりあっていたそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「わしはおまえ達のような{nl}{nl}{nl}おもいあがった人間どもを、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}こらしめておっただけじゃ!!{nl}{nl}{nl}悪い事などしとらんわい。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「ほんと、 かわいげのない{nl}{nl}{nl}やつだな。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「すなおにあやまりなさい。」{nl}{nl}{nl}「いやじゃ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
+  "en": ""
+ },
+ {
+  "id": 55,
+  "ptr": "13996",
+  "jp": "「やれやれ、 やっとおわった。{nl}{nl}{nl}おしょうさまが、しんぱいして{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}まっておいでだろうなぁ。」{nl}{nl}{nl}「じつは、わたし神主さまに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}ないしょで来ているの。きっと{nl}{nl}{nl}おこっていらっしゃるわ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「……………。」{nl}{nl}{nl}「わたし達まだまだ修行した{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}ほうがいいとおもわない?」{nl}{nl}{nl}「そうだね。 そうしよう。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}このあと二人の旅はまだまだ{nl}{nl}{nl}つづくのじゃが、ひとまずは{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}  めでたし  めでたし。{key}{end}",
+  "en": ""
+ },
+ {
+  "id": 56,
+  "ptr": "13B88",
+  "jp": "つづける{nl}{nl}{nl}やめる{end}",
+  "en": ""
+ },
+ {
+  "id": 57,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 58,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "alias": 57,
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 59,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "alias": 57,
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 60,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "alias": 57,
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 61,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "alias": 57,
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 62,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "alias": 57,
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 63,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "alias": 57,
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 64,
+  "ptr": "13B9E",
+  "jp": "EXECTIVE PRODUCER{end}",
+  "en": "",
+  "alias": 57,
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 65,
+  "ptr": "13BC2",
+  "jp": "EIKI IZUMI{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 66,
+  "ptr": "13BD8",
+  "jp": "PRODUCER{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 67,
+  "ptr": "13BEA",
+  "jp": "MAKOTO OHKAWA{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 68,
+  "ptr": "13C06",
+  "jp": "DIRECTOR{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 69,
+  "ptr": "13C18",
+  "jp": "MITSUO NAGAI{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 70,
+  "ptr": "13C32",
+  "jp": "AKEMI HATTORI{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 71,
+  "ptr": "13C4E",
+  "jp": "TATSUYA NAKAJUN{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 72,
+  "ptr": "13C6E",
+  "jp": "STAFF{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 73,
+  "ptr": "13C7A",
+  "jp": "N.SAGARA{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 74,
+  "ptr": "13C8C",
+  "jp": "MURACHAN{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 75,
+  "ptr": "13C9E",
+  "jp": "DR.TAKEMURA{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 76,
+  "ptr": "13CB6",
+  "jp": "MAZ{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 77,
+  "ptr": "13CBE",
+  "jp": "FAMISHIN{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 78,
+  "ptr": "13CD0",
+  "jp": "FUGIWARA KOUITE{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 79,
+  "ptr": "13CF0",
+  "jp": "NOBU{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 80,
+  "ptr": "13CFA",
+  "jp": "R.YAMAGUCHI{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 81,
+  "ptr": "13D12",
+  "jp": "K.KUMAKI{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 82,
+  "ptr": "13D24",
+  "jp": "M.INOUE{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 83,
+  "ptr": "13D34",
+  "jp": "J.TABUCHI{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 84,
+  "ptr": "13D48",
+  "jp": "M.SHIBATA{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 85,
+  "ptr": "13D5C",
+  "jp": "K.OHSUGI{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 86,
+  "ptr": "13D6E",
+  "jp": "DHARMA{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 87,
+  "ptr": "13D7C",
+  "jp": "K.ASAKURA{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 88,
+  "ptr": "13D90",
+  "jp": "1994 ©METRO{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 89,
+  "ptr": "13DA8",
+  "jp": "1994 ©ITC,Inc.{end}",
+  "en": "",
+  "note": "credits: romaji, keep (D3); fix only typos"
+ },
+ {
+  "id": 90,
+  "ptr": "13DC6",
+  "jp": "MATCH{end}",
+  "en": "",
+  "note": "already English"
+ }
+]
