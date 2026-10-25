@@ -44,6 +44,8 @@ def run(scene, a):
         cmd += ["--var", f"SAVE='{state}'"]
     if a.mash:
         cmd += ["--var", f"AFTER_MASH={a.mash}"]
+    for s in a.script:
+        cmd += ["--script", s]
     if a.shot_every:
         cmd += ["--shot-every", str(a.shot_every), "--sheet"]
     p = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -66,6 +68,7 @@ def main():
     ap.add_argument("--shot-every", type=int, default=0)
     ap.add_argument("--mash", type=int, default=0, help="after arrival, press A every N frames during --hold")
     ap.add_argument("--jobs", type=int, default=3)
+    ap.add_argument("--script", action="append", default=[], help="extra Lua probe, e.g. tools/debug/freetrap.lua")
     a = ap.parse_args()
     names = scene_names()
     if a.list:
