@@ -19,9 +19,20 @@ def test_story_page_widths_and_clears():
 
 def test_overflow_and_japanese_are_errors():
     c = font.codec("msg")
-    errs, _ = lint.check("msg", {"id": 36, "en": "x" * 16 + "{end}"}, c)
+    errs, _ = lint.check("msg", {"id": 36, "jp": "{end}", "en": "x" * 16 + "{end}"}, c)
     assert "16 columns" in errs[0]
-    errs, _ = lint.check("msg", {"id": 15, "en": "a{nl}b{nl}c{end}"}, c)
+    errs, _ = lint.check("msg", {"id": 15, "jp": "{end}", "en": "a{nl}b{nl}c{end}"}, c)
     assert "3 lines" in errs[0]
-    errs, _ = lint.check("msg", {"id": 15, "en": "あ{end}"}, c)
+    errs, _ = lint.check("msg", {"id": 15, "jp": "{end}", "en": "あ{end}"}, c)
     assert any("Japanese" in e for e in errs)
+
+
+def test_control_codes_match_but_layout_may_change():
+    c = font.codec("msg")
+    jp = "{mode:01}あ{nl}い{key}{page}う{end}"
+    assert lint.check("msg", {"id": 15, "jp": jp, "en": "{mode:01}a b{key}{page}{rep:1A} {page}c{key}{page}d{end}"},
+                      c)[0] == []
+    errs, _ = lint.check("msg", {"id": 15, "jp": jp, "en": "a{key}{page}c{end}"}, c)
+    assert "control codes differ" in errs[0]
+    errs, _ = lint.check("msg", {"id": 15, "jp": jp, "en": "{mode:01}a c{end}"}, c)
+    assert "fewer" in errs[0]

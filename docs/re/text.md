@@ -22,6 +22,9 @@ All verified 2026-10-26 on the original ROM (Mesen watch on the BG3 map buffer, 
   (`$80:9604: LDA $82A724,x`). 91 real entries (0-90); entries 91-95 point at 0x13DD2 (past the text, not strings).
 - Text block: file 0x127E4 - 0x13DD1 (bank $82, $A7E4-$BDD1), 5,614 bytes. Strings 57-64 share one address.
 - Message ids are set by the callers of $80:9604 (search `STA $1A25`).
+- No other reader (checked 2026-10-26): a scan for every original string address of both blocks as an immediate
+  (`LDA/LDX/LDY #`, abs loads) or 24-bit pointer found only text/graphics data and `LDA #$E000` = WRAM $7F:E000
+  buffer setup in bank $85. Both engines reach strings through their pointer table only, so relocation is safe.
 
 ## Box geometry (from the script, to be measured in game)
 - Story box: 26 tiles wide (the clear runs are `{rep:1A}` = 26 spaces), 2 lines of 16 px, line pitch 24 px.

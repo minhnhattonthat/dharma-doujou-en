@@ -2,12 +2,15 @@
 
     python -X utf8 tools/lint.py          # exit 1 on any error; check.py runs it through tests/test_lint.py
 
-Per string: encodable with the English table, no Japanese, ends in {end}, every drawn line within its box's
-columns (one column per character, {rep:nn}+char = nn columns, {spN} = N), lines per page within the box. A box
+Per string: English present wherever the Japanese has kana/kanji (ids sharing an address count once), encodable
+with the English table, no Japanese, ends in {end}, every drawn line within its box's
+columns (one column per character, {rep:nn}+char = nn columns, {spN} = N), lines per page within the box, control
+codes as in the Japanese except layout ({nl} {page} {key} {rep} {sp} {down}; {key}/{page} may grow, not shrink). A box
 still tagged "guess" makes a warning line for each string that uses it, so it gets measured before release.
 """
 import json
 import re
+from collections import Counter
 import sys
 from pathlib import Path
 
@@ -76,6 +79,16 @@ def lines(text):
     return out
 
 
+CONTROL = re.compile(r"\{\w+(?::[0-9A-Fa-f]{2})?\}|\[[0-9A-Fa-f]{4}\]")
+# line breaks, page breaks with their key wait, clears and spacing: re-laid out for English; all else must match
+LAYOUT = Counter({k: 999 for k in ["{nl}", "{page}", "{key}"] + [f"{{rep:{n:02X}}}" for n in range(256)]
+                  + [f"{{sp{n}}}" for n in range(10)] + [f"{{down:{n:02X}}}" for n in range(256)]})
+
+
+def controls(text):
+    return Counter(CONTROL.findall(text))
+
+
 def check(block, e, codec):
     errs, warns = [], []
     en, tag = e.get("en", ""), f"{block} {e['id']}"
@@ -89,6 +102,11 @@ def check(block, e, codec):
         codec.encode(en)
     except ValueError as x:
         errs.append(f"{tag}: {x}")
+    jc, ec = controls(e["jp"]), controls(en)
+    if jc - LAYOUT != ec - LAYOUT:
+        errs.append(f"{tag}: control codes differ from the Japanese: jp {dict(jc - ec)}, en {dict(ec - jc)}")
+    if ec["{key}"] < jc["{key}"] or ec["{page}"] < jc["{page}"]:
+        errs.append(f"{tag}: fewer {{key}}/{{page}} than the Japanese (pages may be added, not dropped)")
     box = box_of(block, e["id"])
     if box:
         cols, per_page, how = BOXES[box]
@@ -109,7 +127,10 @@ def run():
     errs, warns = [], []
     for block in ("msg", "screen"):
         codec = font.codec(block)
+        first = {}  # ids sharing an address are built from the first one's text
         for e in json.loads((ROOT / "script" / f"{block}.json").read_text(encoding="utf-8")):
+            if first.setdefault(e["ptr"], e["id"]) == e["id"] and not e.get("en") and JP.search(e["jp"]):
+                errs.append(f"{block} {e['id']}: Japanese with no English")
             a, b = check(block, e, codec)
             errs += a
             warns += b

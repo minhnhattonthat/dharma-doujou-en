@@ -133,6 +133,14 @@ def marker_texts():
     return texts
 
 
+def outside(writes, path=ROOT / "tools" / "ranges.txt"):
+    """Errors for writes (romdiff.load_writes form) not inside one allowed range of tools/ranges.txt."""
+    ranges = [[int(x, 16) for x in line.split()[0].split("-")]
+              for line in path.read_text(encoding="utf-8").splitlines() if line.strip() and line[0] != "#"]
+    return [f"write outside tools/ranges.txt: 0x{off:X}+{len(new)} ({by})" for off, _, new, by in writes
+            if not any(lo <= off and off + len(new) - 1 <= hi for lo, hi in ranges)]
+
+
 def build(orig, out=OUT, texts=None):
     """texts: {block name: strings by id}; a block not given is repacked from the original."""
     rom = Rom(orig)
@@ -149,7 +157,9 @@ def build(orig, out=OUT, texts=None):
     out.write_bytes(rom.data)
     log = out.with_name(out.stem + "_writes.txt") if out != OUT else out.with_name("writes.txt")
     log.write_text("\n".join(rom.writes) + "\n", encoding="utf-8")
-    errs, _ = romdiff.check(orig, bytes(rom.data), set(), romdiff.load_writes(log))
+    writes = romdiff.load_writes(log)
+    errs, _ = romdiff.check(orig, bytes(rom.data), set(), writes)
+    errs += outside(writes)
     if errs:
         sys.exit("romdiff:\n" + "\n".join(errs))
     return bytes(rom.data)
