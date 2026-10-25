@@ -2,7 +2,7 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 1 (recon) mostly done; next 2 (debug tool). Last build: none yet (2026-10-26).
+- **Phase:** 1 (recon) done; next 2 (debug tool). Last build: none yet (2026-10-26).
 - **Done:**
   - Step 0: template, MesenCE 2.2.1 in tools/mesen, guard hook (plugin) blocks the canary, pre-commit runs
     tools/check.py and rejects a failing test, rom.sha1 pinned, smoke boots the original.
@@ -13,8 +13,8 @@ Updated at the end of every session. Keep it to what the next session needs; his
   1. Phase 2 debug tool: tools/debug/warp.lua + scenes list (main menu, each mode, story stages 1-8 with their
      intro/outro text, quiz, tutorial, 2P battle, continue/game-over, rank certificate, ending, credits, options).
      Find RAM for game mode / stage id with ramsearch.
-  2. While touring: finish the graphics survey rows G1, G3, G4, G5, G7, G9 in docs/re/graphics.md (sources unknown:
-     difficulty menu, continue menu, quiz counter label, title logo).
+  2. Graphics survey (docs/re/graphics.md) lists G1-G15 by resource; rows marked "res" still need a screen shot via
+     the debug tool (stage cards, stage names, 2P battle, mastery plates, attract-mode release date, stack warning).
   3. Phase 3 identity build (tools/build.py writing nothing must equal the original), phase 4 extract to script/*.json.
   - Engine plan (tentative): English 8x16 narrow font (mode 2000) in both fonts, 26 chars per story line, more pages
     instead of cuts; 24x24 picture tiles redrawn as English for G2/G3.
