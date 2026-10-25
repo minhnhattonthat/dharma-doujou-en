@@ -85,11 +85,11 @@ def pack(rom, block, strings):
             sys.exit(f"{name}: text is over its block: string {i} ({len(enc)} bytes) fits in no free region "
                      f"({', '.join('%d bytes left' % (hi - lo - len(b)) for lo, hi, b in regions)})")
     rom.put(table, struct.pack(f"<{count}H", *ptrs), f"{name}-ptrs")
-    for lo, hi, blob in regions:
-        if blob:
-            if lo != start:
-                assert len(set(rom.orig[lo:hi])) == 1, f"{name}: free space 0x{lo:X} is not blank"
-            rom.put(lo, bytes(blob), f"{name}-text")
+    rom.put(start, bytes(regions[0][2]).ljust(end - start, b"\0"), f"{name}-text")  # no stale Japanese tail
+    lo, hi, blob = regions[1]
+    if blob:
+        assert len(set(rom.orig[lo:hi])) == 1, f"{name}: free space 0x{lo:X} is not blank"
+        rom.put(lo, bytes(blob), f"{name}-text2")
 
 
 def load_script(lang=LANG):

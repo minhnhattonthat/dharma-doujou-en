@@ -24,7 +24,8 @@ def test_glyphs_fit_the_cell():
 def test_english_table_roundtrip(engine):
     c = font.codec(engine)
     s = "The quick brown fox, " + PRINTABLE + "{end}"
-    assert c.decode_words(c.encode_words(s)).replace("{sp1}", " ") == s
+    assert c.decode_words(c.encode_words(s)) == s
+    assert c.encode_words(" ") != [0xFF01]  # engine 2: a drawn blank, not a tile skip
 
 
 @pytest.mark.parametrize("engine", font.ENGINES)

@@ -20,8 +20,9 @@ import rle  # noqa: E402
 from text import Codec  # noqa: E402
 
 SRC = ROOT / "fonts" / "en8x16.txt"
-# free space for moved resources (file ranges, each inside one bank; docs/re/graphics.md)
-FREE = [(0x0E2E90, 0x0E8000), (0x0F5130, 0x0F8000), (0x0A5990, 0x0A8000)]
+# free space for moved resources (file ranges, each inside one bank; trap-tested, docs/re/graphics.md).
+# Not bank $94's zero tail: $80:98BC reads all of it at boot.
+FREE = [(0x0E2E90, 0x0E8000), (0x0F5130, 0x0F8000)]
 # engine: (jp table, resources with the tile index of their first tile, bytes per tile, narrow bottom-tile step)
 ENGINES = {
     "msg": ("jp.tbl", [(1, 0x000), (2, 0x100), (3, 0x200), (4, 0x300)], 16, 1),
@@ -104,9 +105,18 @@ def tile_bytes(engine, rows):
     return bytes(out)
 
 
+def engine_glyphs(engine):
+    """Source glyphs, plus a blank space glyph for engine 2: its {sp} controls skip tiles without clearing them,
+    so a skipped tile keeps the previous line's glyph (seen in the tutorial bubble)."""
+    gl = glyphs()
+    if engine == "screen":
+        gl[" "] = [[0] * 8 for _ in range(16)]
+    return gl
+
+
 def assign(engine):
-    """{char: narrow code (2000|N)} for every source glyph."""
-    gl, sl = glyphs(), slots(engine)
+    """{char: narrow code (2000|N)} for every glyph of the engine."""
+    gl, sl = engine_glyphs(engine), slots(engine)
     if len(gl) > len(sl):
         sys.exit(f"font: {len(gl)} glyphs, only {len(sl)} {engine} slots")
     return {ch: 0x2000 | n for ch, n in zip(gl, sl)}
@@ -119,22 +129,19 @@ def table_lines(engine):
              if ln.startswith("#!") or ("={" in ln and ln.endswith("}"))]
     if engine == "msg":
         lines.append("4000=\\s")
-    lines += ["%04X=%s" % (code, ch) for ch, code in assign(engine).items()]
+    lines += ["%04X=%s" % (code, "\\s" if ch == " " else ch) for ch, code in assign(engine).items()]
     return lines
 
 
 def codec(engine):
-    c = Codec(table_lines(engine))
-    if engine == "screen":
-        c.enc[" "] = c.cenc["sp1"]  # engine 2 has no space glyph: a space skips one tile (decodes as {sp1})
-    return c
+    return Codec(table_lines(engine))
 
 
 def patch(rom, put):
     """Draw the English glyphs into both engines' font resources in rom (a Rom from build.py)."""
     free = list(FREE)
-    gl = glyphs()
     for engine, (_, resources, size, step) in ENGINES.items():
+        gl = engine_glyphs(engine)
         data = {r: bytearray(rle.decode(rom.orig, r)[0]) for r, _ in resources}
         for ch, code in assign(engine).items():
             n = code & 0x1FFF

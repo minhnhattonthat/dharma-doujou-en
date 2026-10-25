@@ -37,6 +37,7 @@ S.attract = cat(title(), { { wait = function(e) return e.r16(0x1CF8) ~= 0 end, d
 -- Story
 S.story_menu = cat(menu(0), { screen(NEWPW) })                               -- new game / password
 S.password = cat(S.story_menu, { { press = "down" }, { frames = 20 }, pick(NEWPW), { frames = 120 } })
+S.password_end = cat(S.password, { { press = "start" }, { frames = 30 } })  -- confirm the blank password (msg 13?)
 S.story_limit = cat(S.story_menu, { pick(NEWPW), screen(LIMIT) })           -- time limit / move limit
 S.story_intro = cat(S.story_limit, { pick(LIMIT), until_at(3, 0, 200, "a") })
 S.map = cat(menu(0), { until_at(7, 1, 60, "a") })
@@ -51,6 +52,7 @@ S.ending = cat(story_play(), { clear_as(7, 2), until_at(13, nil, 150) })
 S.credits = cat(story_play(), { clear_as(7, 2), until_at(2, nil, 300, "a") })
 -- Story game over: drop pieces fast until the stack tops out, then the continue screen (mode 9 sub 4).
 S.gameover = cat(story_play(), { until_at(9, 4, 30, "down", 10) })
+S.gameover_quit = cat(S.gameover, { { press = "down" }, { frames = 20 }, { press = "a" }, { frames = 30 } })  -- 出直す
 
 -- Training (修行編): character, difficulty (mode 10 sub 1), play.
 S.training_char = cat(menu(1), { screen(CHAR) })

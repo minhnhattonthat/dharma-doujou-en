@@ -3,7 +3,8 @@
 Skill: translate-retro-game; `python tools/skill.py` prints its folder. Read its SKILL.md before ROM, text or QA work. `"$(python tools/skill.py)"` works in bash and PowerShell; never paste a `plugins/cache/<hash>` path.
 
 ## Commands (run from repo root)
-- Build:    `python -X utf8 tools/build.py`  -> build/dharma_en.sfc (checks the dump against `rom.sha1` first)
+- Build:    `python -X utf8 tools/build.py`  -> build/dharma_en.sfc (checks the dump against `rom.sha1` first; `--marker` = id+ruler build, `--qa msg:14="Text"` overrides one string)
+- Lint:     `python -X utf8 tools/lint.py` (box budgets in docs/re/windows.md; also run by check)
 - Dump:     `python -X utf8 tools/dump.py [--force]` -> script/{msg,screen}.json (never clobbers `en`; build reads `en`, else `jp`)
 - Check:    `python -X utf8 tools/check.py`  (tests + lint; the pre-commit hook runs this)
 - Smoke:    `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/dharma_en.sfc --out work/qa/smoke --route tools/routes/boot.txt --smoke`

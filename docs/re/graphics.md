@@ -8,14 +8,15 @@
 - Known resources: 1-4 = BG3 dialogue font (tiles 0x000-0x3FF, 4 KB each, VRAM words $5000-$6FFF);
   27 = BG1 tiles 0x200-0x3FF on the menu screen (BG1 4bpp font, guess: also the tutorial font); 50 = BG1 tiles 0-0x1FF there.
 
-## Free space (candidates: zero runs at bank ends, not yet trap-tested)
-| Bank | File range | Bytes |
-|---|---|---|
-| $82 (main text bank) | 0x16900-0x17FFF | 5,888 |
-| $84 (engine-2 text bank) | 0x2709E-0x27FFF | 3,938 |
-| $94 | 0x0A5980-0x0A7FFF | 9,856 |
-| $9C | 0x0E2E8D-0x0E7FFF | 20,851 |
-| $9E | 0x0F5121-0x0F7FFF | 11,999 |
+## Free space (zero runs at bank ends; trap-tested 2026-10-26: `tools/debug/freetrap.lua` over all 43 warps on
+the original logged no reads of the ranges used, except bank $94)
+| Bank | File range used | Bytes | State |
+|---|---|---|---|
+| $82 (main text bank) | 0x16910-0x17FFF | 5,872 | free (no reads); build.py text spill |
+| $84 (engine-2 text bank) | 0x270A0-0x27FFF | 3,936 | free (no reads); build.py text spill |
+| $94 | 0x0A5980-0x0A7FFF | 9,856 | NOT free: `$80:98BC` reads the whole tail at boot (f130) |
+| $9C | 0x0E2E90-0x0E7FFF | 20,848 | free (no reads); font.py resource moves |
+| $9E | 0x0F5130-0x0F7FFF | 11,984 | free (no reads); font.py resource moves |
 Others listed by the recon scan (most banks have 300-4,000 bytes). The ROM can also grow to 2 MB (header $FFD7 0A -> 0B).
 
 ## Graphics-text survey (tile-drawn Japanese)
@@ -33,13 +34,13 @@ that shows it (add `--hold N --mash 60 --shot-every 60` for scenes that come aft
 | G7 | Quiz (問答) HUD | あと・N手 / 秒 labels; 五四三二一 秒前 countdown; ちょっとたんま (pause); こうさん / つづける | res 37, res 64 | seen (あと・手) / res | quiz_play |
 | G8 | In-game HUD | NEXT, LEVEL, GAME OVER, CLEAR, CLEAR BONUS | graphics, already English | keep | stage1 |
 | G9 | Rank certificate / mastery | 免許 皆伝 plates | res 78 | seen | quiz_master |
-| G10 | Bottom-right rank plate | 入門 1 | engine-2 strings 52-56 + big digits 0-9 | seen | quiz_play, quiz_lv2-5 |
+| G10 | Bottom-right rank plate | 入門 1 | NOT engine-2 strings 52-56 (marker build still shows 入門); not a sprite; source not located | seen | quiz_play, quiz_lv2-5 |
 | G11 | Stage names (story) | 鎌倉 箱根 浜松 伊勢 滋賀 奈良 大阪 京都, STAGE FINAL | res 36 (big plates) | res | stage2-8 + hold |
 | G12 | Stack warning | 積み上がり注意!! banner | res 8 | seen | gameover (shots on the way) |
 | G13 | 2P battle | 一 三 本 勝 負 (best of 1/3), 勝利 (victory) | res 63, res 77 | seen (三本勝負, 1P 勝利) | versus_play, versus_win |
 | G14 | Attract / demo | 1995年2月発売予定 ("on sale Feb 1995") | res 67 | res | attract + hold |
 | G15 | Credits | romaji names (English already) | engine-1 strings 57-90 | text | credits |
-| G16 | Password screen | ぱすわーど header plate | not located yet | seen | password |
-| G17 | 2P match record | 対戦成績 header; つづける / やめる choice | not located yet | seen | versus_win + hold |
-| G18 | Quiz certificate | 免 状 title and body text, seal stamp | not located yet (text or graphics?) | seen | quiz_break |
+| G16 | Password screen | ぱすわーど header plate | graphics (stays Japanese in the marker build); resource not located | seen | password |
+| G17 | 2P match record | 対戦成績 header (graphics, stays Japanese in the marker build); つづける / やめる = msg 56 (text) and win counts = msg 37 (text) | header resource not located | seen | versus_win + hold |
+| G18 | Quiz certificate | body = msg 30 + rank names msg 31-35 (text, marker build); たいへん よくできました seal stamp = graphics | stamp resource not located | seen | quiz_break |
 Also in ROM: res 31 holds a full Latin 8x8 font (A-Z, a-z), and res 25/59 small English HUD letters.

@@ -39,3 +39,21 @@ All verified 2026-10-26 on the original ROM (Mesen watch on the BG3 map buffer, 
 - BG3 2bpp, chr base VRAM word $5000, 1,024 tiles, from compressed resources 1-4 (`tools/rle.py`, docs/re/graphics.md).
 - Kana and kanji at tiles 0x000-0x2EB (16x16), Latin capitals/digits as 8x16 narrow glyphs at 0x148-0x156, 0x1F8-0x1FE,
   0x2EC-0x2F4, 0x300-0x32B, 0x3F1-0x3FE. 0x330-0x3EF = 24x24 picture tiles.
+- Engine 2 font (verified 2026-10-26, VRAM dump in the tutorial): BG1 4bpp, chr base word $3000, tiles 0x200-0x3FF =
+  resources 34 (0x200-0x2FF) and 35 (0x300-0x3FF). Ink colour C on background F, B = anti-alias. (Resource 27 is the
+  menu's BG1 tiles, not this font.)
+
+## English font (verified in game 2026-10-26: marker and torture builds, docs/re/windows.md)
+- Source `fonts/en8x16.txt` (drawn for the project): A-Z a-z 0-9 . , ! ? ' " - : ; ( ) … / as 8x16 narrow glyphs,
+  1 px strokes, caps rows 2-12, descenders to row 14. `tools/font.py` adds the engine-1 shadow (colour 1, right and
+  down; ink colour 3) and draws them into kana/kanji slots (no English string uses those): engine 1 code
+  2000|N = tile N over N+1, two per 16x16 kana slot; engine 2 code 2000|N = tile N over N+16, plus a drawn blank
+  for the space (engine 2's `{spN}` skips without clearing). The font resources are re-encoded with tools/rle.py
+  and still fit in place (font.py moves one to free space if it ever grows).
+- Tables are built in code (`font.codec(block)`): the jp table's controls + the English glyphs; engine 1 space =
+  4000. The build encodes a string's `en` with it, its `jp` fallback with the jp table, and draws the font only
+  when some string is English (so the identity build stays byte-exact).
+- jp.tbl fix: 013C is ピ (直感・スピード勝負 on the mode screen), not ビ.
+- Text that doesn't fit its block spills into the bank's free space (msg: 0x16910-0x17FFF; screen:
+  0x270A0-0x27FFF), first fit per string; the block's unused tail is zeroed. Free-space reads trap-tested with
+  `tools/debug/freetrap.lua` over all warps on the original.

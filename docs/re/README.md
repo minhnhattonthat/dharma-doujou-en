@@ -15,6 +15,7 @@ Addresses are for the dump in `rom.sha1` unless a note says otherwise. Header: L
 | text.md | both text engines: encoding, control codes, pointer tables, box size, fonts | verified (roundtrip) |
 | graphics.md | RLE compression, resource table, free space, graphics-text survey | compression verified; survey partial |
 | debug.md | scene state machine ($17/$19), stage/quiz/menu RAM, how each warp works | verified (warps) |
+| windows.md | every text box's column/line budget (the width gate), fixed-position layouts | main boxes measured; some guessed |
 
 Gotchas:
 - Text is 16-bit tile codes, not bytes: `relsearch.py` finds nothing. Trace the BG map buffer writer instead.
