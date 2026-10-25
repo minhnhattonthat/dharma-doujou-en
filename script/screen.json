@@ -73,97 +73,97 @@
   "id": 10,
   "ptr": "25B2E",
   "jp": "ようまいられた。{end}",
-  "en": ""
+  "en": "So, you have come.{end}"
  },
  {
   "id": 11,
   "ptr": "25B40",
   "jp": "はたして達磨道を、{end}",
-  "en": ""
+  "en": "But can you master{end}"
  },
  {
   "id": 12,
   "ptr": "25B54",
   "jp": "きわめられるかのう?{end}",
-  "en": ""
+  "en": "the Daruma Way?{end}"
  },
  {
   "id": 13,
   "ptr": "25B6A",
   "jp": "では、さっそく始めるぞ{end}",
-  "en": ""
+  "en": "Then let us begin.{end}"
  },
  {
   "id": 14,
   "ptr": "25B82",
   "jp": "{sp4}の第{sp4}問。{end}",
-  "en": ""
+  "en": "{sp4}{sp2} Q{sp4}{end}"
  },
  {
   "id": 15,
   "ptr": "25B90",
   "jp": "{sp4}手内で、そろえよ。{end}",
-  "en": ""
+  "en": "{sp4}-move limit!{end}"
  },
  {
   "id": 16,
   "ptr": "25BA6",
   "jp": "{sp4}秒内で、そろえよ。{end}",
-  "en": ""
+  "en": "{sp4}-second limit!{end}"
  },
  {
   "id": 17,
   "ptr": "25BBC",
   "jp": "{sp4}分内で、そろえよ。{end}",
-  "en": ""
+  "en": "{sp4}-minute limit!{end}"
  },
  {
   "id": 18,
   "ptr": "25BD2",
   "jp": "いちについて{end}",
-  "en": ""
+  "en": "On your mark...{end}"
  },
  {
   "id": 19,
   "ptr": "25BE0",
   "jp": "よーい{end}",
-  "en": ""
+  "en": "Get set...{end}"
  },
  {
   "id": 20,
   "ptr": "25BE8",
   "jp": "はじめっ{sp1}!!{end}",
-  "en": ""
+  "en": "Go!!{end}"
  },
  {
   "id": 21,
   "ptr": "25BF8",
   "jp": "あと、{sp4}手じゃ。{end}",
-  "en": ""
+  "en": "Only {sp4} left!{end}"
  },
  {
   "id": 22,
   "ptr": "25C0A",
   "jp": "あと、{sp4}秒じゃ。{end}",
-  "en": ""
+  "en": "Only {sp4} left!{end}"
  },
  {
   "id": 23,
   "ptr": "25C1C",
   "jp": "あと、{sp4}分じゃ。{end}",
-  "en": ""
+  "en": "Only {sp4} left!{end}"
  },
  {
   "id": 24,
   "ptr": "25C2E",
   "jp": "よく考えてうつのじゃ{end}",
-  "en": ""
+  "en": "Think, then strike.{end}"
  },
  {
   "id": 25,
   "ptr": "25C44",
   "jp": "あせらず、せいかくに!{end}",
-  "en": ""
+  "en": "Stay calm. Be exact!{end}"
  },
  {
   "id": 26,
@@ -176,187 +176,187 @@
   "id": 27,
   "ptr": "25C5E",
   "jp": "じっくり、考えて・・・。{end}",
-  "en": ""
+  "en": "Take your time...{end}"
  },
  {
   "id": 28,
   "ptr": "25C78",
   "jp": "そっ、それじゃ{sp1}!!{end}",
-  "en": ""
+  "en": "Th-that's it!!{end}"
  },
  {
   "id": 29,
   "ptr": "25C8E",
   "jp": "・・・・・・・・・・・・。{end}",
-  "en": ""
+  "en": "............{end}"
  },
  {
   "id": 30,
   "ptr": "25CAA",
   "jp": "うーむ・・どうかな{sp1}?{end}",
-  "en": ""
+  "en": "Hmm... I wonder?{end}"
  },
  {
   "id": 31,
   "ptr": "25CC2",
   "jp": "んっ{sp1}!{end}",
-  "en": ""
+  "en": "Hm!{end}"
  },
  {
   "id": 32,
   "ptr": "25CCC",
   "jp": "どうしたのじゃ{sp1}!?{end}",
-  "en": ""
+  "en": "What's wrong!?{end}"
  },
  {
   "id": 33,
   "ptr": "25CE2",
   "jp": "時間がなくなるぞっ{sp1}!!{end}",
-  "en": ""
+  "en": "Time's running out!!{end}"
  },
  {
   "id": 34,
   "ptr": "25CFC",
   "jp": "お手上げかのう{sp1}!?{end}",
-  "en": ""
+  "en": "Are you stumped!?{end}"
  },
  {
   "id": 35,
   "ptr": "25D12",
   "jp": "手がとまっておるぞ!{end}",
-  "en": ""
+  "en": "Why've you stopped?{end}"
  },
  {
   "id": 36,
   "ptr": "25D28",
   "jp": "積み上がっとるぞ{sp1}!!{end}",
-  "en": ""
+  "en": "It's piling up!!{end}"
  },
  {
   "id": 37,
   "ptr": "25D40",
   "jp": "こうさんするのか{sp1}?{end}",
-  "en": ""
+  "en": "Do you give up?{end}"
  },
  {
   "id": 38,
   "ptr": "25D56",
   "jp": "つづける{end}",
-  "en": ""
+  "en": "Continue{end}"
  },
  {
   "id": 39,
   "ptr": "25D60",
   "jp": "こうさん{end}",
-  "en": ""
+  "en": "Give up{end}"
  },
  {
   "id": 40,
   "ptr": "25D6A",
   "jp": "それまで{sp1}!!{end}",
-  "en": ""
+  "en": "That's enough!!{end}"
  },
  {
   "id": 41,
   "ptr": "25D7A",
   "jp": "手数なしで{end}",
-  "en": ""
+  "en": "Out of moves...{end}"
  },
  {
   "id": 42,
   "ptr": "25D86",
   "jp": "時間なしで{end}",
-  "en": ""
+  "en": "Out of time...{end}"
  },
  {
   "id": 43,
   "ptr": "25D92",
   "jp": "ゲームオーバーじゃ{sp1}!{end}",
-  "en": ""
+  "en": "Game over!{end}"
  },
  {
   "id": 44,
   "ptr": "25DAA",
   "jp": "おみごと{sp1}!!{end}",
-  "en": ""
+  "en": "Splendid!!{end}"
  },
  {
   "id": 45,
   "ptr": "25DBA",
   "jp": "なかなかやるのう{sp1}!!{end}",
-  "en": ""
+  "en": "Not bad at all!!{end}"
  },
  {
   "id": 46,
   "ptr": "25DD2",
   "jp": "そのちょうしじゃ{sp1}!!{end}",
-  "en": ""
+  "en": "Keep it up!!{end}"
  },
  {
   "id": 47,
   "ptr": "25DEA",
   "jp": "おぬし、すじがよいぞ!{end}",
-  "en": ""
+  "en": "You have a knack!{end}"
  },
  {
   "id": 48,
   "ptr": "25E02",
   "jp": "たいしたもんじゃ{sp1}!!{end}",
-  "en": ""
+  "en": "Impressive!!{end}"
  },
  {
   "id": 49,
   "ptr": "25E1A",
   "jp": "ただものではないな!?{end}",
-  "en": ""
+  "en": "No ordinary pupil!?{end}"
  },
  {
   "id": 50,
   "ptr": "25E32",
   "jp": "こいつは、すごい{sp1}!!{end}",
-  "en": ""
+  "en": "Now that's amazing!!{end}"
  },
  {
   "id": 51,
   "ptr": "25E4A",
   "jp": "{sp4}の第{sp2}問。{end}",
-  "en": ""
+  "en": "{sp4}{sp2} Q{sp2}{end}"
  },
  {
   "id": 52,
   "ptr": "25E58",
   "jp": "入門{end}",
-  "en": ""
+  "en": "Novice{end}"
  },
  {
   "id": 53,
   "ptr": "25E5E",
   "jp": "師範{end}",
-  "en": ""
+  "en": "Sensei{end}"
  },
  {
   "id": 54,
   "ptr": "25E64",
   "jp": "名人{end}",
-  "en": ""
+  "en": "Expert{end}"
  },
  {
   "id": 55,
   "ptr": "25E6A",
   "jp": "達人{end}",
-  "en": ""
+  "en": "Master{end}"
  },
  {
   "id": 56,
   "ptr": "25E70",
   "jp": "道主{end}",
-  "en": ""
+  "en": "Legend{end}"
  },
  {
   "id": 57,
   "ptr": "25E76",
   "jp": "だるま道入門へ{end}",
-  "en": ""
+  "en": "Welcome to the{end}"
  },
  {
   "id": 58,
@@ -411,198 +411,198 @@
   "id": 65,
   "ptr": "25E86",
   "jp": "{sp8}ようこそ{end}",
-  "en": ""
+  "en": "Daruma Way!{end}"
  },
  {
   "id": 66,
   "ptr": "25E92",
   "jp": "きほんだけ{end}",
-  "en": ""
+  "en": "I'll explain{end}"
  },
  {
   "id": 67,
   "ptr": "25E9E",
   "jp": "せつめいするぞ{end}",
-  "en": ""
+  "en": "just the basics.{end}"
  },
  {
   "id": 68,
   "ptr": "25EAE",
   "jp": "まず、かくぶぶんの{end}",
-  "en": ""
+  "en": "First, I'll go{end}"
  },
  {
   "id": 69,
   "ptr": "25EC2",
   "jp": "{sp2}せつめいをする{end}",
-  "en": ""
+  "en": "over each part.{end}"
  },
  {
   "id": 70,
   "ptr": "25ED4",
   "jp": "タイマーが上の{end}",
-  "en": ""
+  "en": "If the timer cuts{end}"
  },
  {
   "id": 71,
   "ptr": "25EE4",
   "jp": "ひもをきると{end}",
-  "en": ""
+  "en": "the rope up top,{end}"
  },
  {
   "id": 72,
   "ptr": "25EF2",
   "jp": "ゲームオーバーに{end}",
-  "en": ""
+  "en": "it's game over{end}"
  },
  {
   "id": 73,
   "ptr": "25F04",
   "jp": "なってしまうぞ{end}",
-  "en": ""
+  "en": "for you!{end}"
  },
  {
   "id": 74,
   "ptr": "25F14",
   "jp": "こまを上まで{end}",
-  "en": ""
+  "en": "If the pieces{end}"
  },
  {
   "id": 75,
   "ptr": "25F22",
   "jp": "積み上げても{end}",
-  "en": ""
+  "en": "stack to the top,{end}"
  },
  {
   "id": 76,
   "ptr": "25F30",
   "jp": "したのそうこを{end}",
-  "en": ""
+  "en": "Or if you fill{end}"
  },
  {
   "id": 77,
   "ptr": "25F40",
   "jp": "いっぱいにして{end}",
-  "en": ""
+  "en": "the storehouse,{end}"
  },
  {
   "id": 78,
   "ptr": "25F50",
   "jp": "おなじ{sp1}こまで{end}",
-  "en": ""
+  "en": "When you line up{end}"
  },
  {
   "id": 79,
   "ptr": "25F60",
   "jp": "そろった時{end}",
-  "en": ""
+  "en": "matching pieces,{end}"
  },
  {
   "id": 80,
   "ptr": "25F6C",
   "jp": "ばくはつ!!{sp1}タイ{end}",
-  "en": ""
+  "en": "BOOM!! It attacks{end}"
  },
  {
   "id": 81,
   "ptr": "25F80",
   "jp": "マーをこうげき!!{end}",
-  "en": ""
+  "en": "the timer!!{end}"
  },
  {
   "id": 82,
   "ptr": "25F94",
   "jp": "ゲームタイムを{end}",
-  "en": ""
+  "en": "That earns you{end}"
  },
  {
   "id": 83,
   "ptr": "25FA4",
   "jp": "かせげるぞ!!{end}",
-  "en": ""
+  "en": "more game time!!{end}"
  },
  {
   "id": 84,
   "ptr": "25FB4",
   "jp": "また、おなじこま{end}",
-  "en": ""
+  "en": "If the pieces{end}"
  },
  {
   "id": 85,
   "ptr": "25FC6",
   "jp": "でない時は{end}",
-  "en": ""
+  "en": "don't match,{end}"
  },
  {
   "id": 86,
   "ptr": "25FD2",
   "jp": "こまは、上に{end}",
-  "en": ""
+  "en": "they get pushed{end}"
  },
  {
   "id": 87,
   "ptr": "25FE0",
   "jp": "くりあげとなるぞ{end}",
-  "en": ""
+  "en": "up a row!{end}"
  },
  {
   "id": 88,
   "ptr": "25FF2",
   "jp": "うちなおしと{end}",
-  "en": ""
+  "en": "That's what we{end}"
  },
  {
   "id": 89,
   "ptr": "26000",
   "jp": "いうことじゃな!{end}",
-  "en": ""
+  "en": "call a do-over!{end}"
  },
  {
   "id": 90,
   "ptr": "26012",
   "jp": "だいたい{end}",
-  "en": ""
+  "en": "So, do you get{end}"
  },
  {
   "id": 91,
   "ptr": "2601C",
   "jp": "わかったかのう?{end}",
-  "en": ""
+  "en": "the general idea?{end}"
  },
  {
   "id": 92,
   "ptr": "2602E",
   "jp": "いろいろな{end}",
-  "en": ""
+  "en": "There are many{end}"
  },
  {
   "id": 93,
   "ptr": "2603A",
   "jp": "だるま道がある・・・{end}",
-  "en": ""
+  "en": "Daruma Ways...{end}"
  },
  {
   "id": 94,
   "ptr": "26050",
   "jp": "ぜんぶのだるまを{end}",
-  "en": ""
+  "en": "Master every{end}"
  },
  {
   "id": 95,
   "ptr": "26062",
   "jp": "きわめるのじゃ!{end}",
-  "en": ""
+  "en": "last daruma!{end}"
  },
  {
   "id": 96,
   "ptr": "26074",
   "jp": "ひだりと{sp1}みぎを{end}",
-  "en": ""
+  "en": "Make the left{end}"
  },
  {
   "id": 97,
   "ptr": "26086",
   "jp": "おなじにするのじゃ!{end}",
-  "en": ""
+  "en": "and right match!{end}"
  }
 ]

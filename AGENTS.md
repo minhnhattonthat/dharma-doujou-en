@@ -7,6 +7,7 @@ Skill: translate-retro-game; `python tools/skill.py` prints its folder. Read its
 - Lint:     `python -X utf8 tools/lint.py` (box budgets in docs/re/windows.md; also run by check)
 - Dump:     `python -X utf8 tools/dump.py [--force]` -> script/{msg,screen}.json (never clobbers `en`; build reads `en`, else `jp`)
 - Check:    `python -X utf8 tools/check.py`  (tests + lint; the pre-commit hook runs this)
+- English:  edit `script/en.tsv` (the only source of `en`), then `python -X utf8 tools/tl.py merge` (wraps story pages, checks slots, lints); `tl.py units` / `tl.py pairs OUT` for translators and reviewers
 - Smoke:    `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/dharma_en.sfc --out work/qa/smoke --route tools/routes/boot.txt --smoke`
 - Warp:     `python -X utf8 tools/warp.py <scene>.. [--hold 900 --mash 60 --shot-every 60] [--save]` (cold boot -> scene; `--list`; `--all --save` regenerates `work/states/`; scenes and RAM: `tools/debug/scenes.lua`, `docs/re/debug.md`; never ask the user to play to a scene)
 - Release:  `python -X utf8 tools/release.py` (patch + verify; never publish without the user)

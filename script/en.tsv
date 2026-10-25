@@ -1,0 +1,173 @@
+# English script source: key<TAB>English. `python -X utf8 tools/tl.py merge` writes it into script/*.json "en".
+# Paged keys (msg:15.2 = page 2) wrap to the box: " / " = line break, " // " = page break. See tools/tl.py.
+# Main menu / mode headers: 12 columns in the framed plate (D10)
+msg:0	Daruma Trek
+msg:1	Daruma Drill
+msg:2	Daruma Quiz
+msg:3	2P Battle
+msg:4	How to Play
+msg:5	Options
+msg:6	New Game
+msg:7	Password
+msg:8	Who will you play as?
+msg:9	Speed and instinct!
+msg:10	Calm and foresight!
+msg:11	Password
+msg:12	See you again!
+msg:13	Incorrect
+msg:14	A tale of long, long ago.
+# Story intro
+msg:15.1	On the roads that linked / the villages, monsters had
+msg:15.2	piled haunted idols high, / blocking travel, they say.
+msg:16.1	In Kamakura, at that time, / lived a young, clever monk
+msg:16.2	and a lovely shrine maiden / with great divine powers.
+msg:16.3	Since childhood, the two / had competed over every
+msg:16.4	little thing as they grew / up, or so the story goes.
+msg:17.1	One day, the head priest / and the villagers were
+msg:17.2	talking about the haunted / idols and the monsters.
+msg:17.3	The young monk, listening / in from behind, spoke up:
+msg:17.4	"Everyone!! I will get rid / of those monsters for you,
+msg:17.5	every last one of them!!" / he said,
+msg:17.6	and before the head priest / could stop him,
+msg:17.7	off he went to fight evil / spirits and train as well.
+msg:18.1	When the shrine maiden / heard of this, not to be
+msg:18.2	outdone, she set off after / the young monk, they say.
+msg:19.1	Many ups and downs await. / How will it all turn out?
+msg:20	The End
+# Quiz certificate: rank names are drawn at column 11 of the rows "Level " and "Rank: " (6 columns, nothing after)
+msg:30	   Certificate of Rank{nl}{nl}{nl}Passed the Daruma Way{nl}{nl}Exam: {nl}{nl}{nl}Rank:
+msg:31	Novice
+msg:32	Sensei
+msg:33	Expert
+msg:34	Master
+msg:35	Legend
+msg:36.1	At last, you've / surpassed me.
+msg:36.2	I grant you full mastery. Well done.
+# Versus record: the code draws each count just left of its label (W at column 5, L at column 10)
+msg:37	 1P{rep:15} 2P{nl}{nl}{nl} {rep:04} W    L {rep:04}  {rep:04} W    L
+# Stage outros
+msg:48.1	Did these two get along, / or not? Who could say...
+msg:48.2	Having beaten the red oni / with ease, they raced each
+msg:48.3	other out of Kamakura, / or so the story goes.
+msg:49.1	"Hey!! Stop right there!!" / "Return our rice balls!!"
+msg:49.2	The story goes that the / two caught the nekomata,
+msg:49.3	made it mend its ways, / shared their rice balls
+msg:49.4	with it, and let it go.
+msg:50.1	From inside the broken / clockwork daruma came
+msg:50.2	a tiny, adorable ghost, / or so they say.
+msg:50.3	"Aww! So cute! Is this / really an evil spirit?"
+msg:50.4	"Looks like the monsters / were using it."
+msg:50.5	The two let the ghost go, / then asked the villagers
+msg:50.6	to free the blue oni tied / to a tree later on,
+msg:50.7	and left the village / behind, they say.
+msg:50.8	"What about the blue oni?" / "Leave him, leave him."
+msg:51.1	Deeply sorry for all it / had done, the kappa
+msg:51.2	caught fish in the sea and / treated them to a feast.
+msg:51.3	"Let's eat!" / "Hey, wait!"
+msg:51.4	"Leave some for me too!"
+msg:52.1	"Doesn't this make it look / like we were the bullies?"
+msg:52.2	"Hmm... this is awkward. / Our rice balls are back,
+msg:52.3	so shall we hurry on?" / "Let's go."
+msg:52.4	The nekomata siblings / offered them rice balls
+msg:52.5	to repay the ones from / before. Accepting them,
+msg:52.6	the two hurried on their / way as the siblings waved.
+msg:53.1	"Those two went and ate / our fish again......"
+msg:53.2	The two kappa gazed long / at the departing pair,
+msg:53.3	sorry to see them go, / or so they say.
+msg:54.1	Now the best of friends, / the three talked on and on
+msg:54.2	until the stars came out.
+msg:54.3	"All I did was teach a / lesson to stuck-up humans
+msg:54.4	like you!! I did nothing / wrong, I tell you."
+msg:54.5	"What a sourpuss."
+msg:54.6	"Just say you're sorry." / "I won't!"
+msg:55.1	"Phew, it's finally over. / The head priest must be
+msg:55.2	waiting, worried sick." / "Actually, I left without
+msg:55.3	telling my shrine master. / He must be furious."
+msg:55.4	"......" / "Don't you think we still
+msg:55.5	need more training?" / "Yeah. Let's do that."
+msg:55.6	Their journey goes on / and on, but for now...
+msg:55.7	   Happily ever after.
+msg:56	Continue{nl}{nl}{nl}Quit
+msg:57	EXECUTIVE PRODUCER
+# Quiz master (engine 2, 20 columns). {sp4} = a number or rank the code draws at that column
+screen:10	So, you have come.
+screen:11	But can you master
+screen:12	the Daruma Way?
+screen:13	Then let us begin.
+screen:14	{sp4}{sp2} Q{sp4}
+screen:15	{sp4}-move limit!
+screen:16	{sp4}-second limit!
+screen:17	{sp4}-minute limit!
+screen:18	On your mark...
+screen:19	Get set...
+screen:20	Go!!
+screen:21	Only {sp4} left!
+screen:22	Only {sp4} left!
+screen:23	Only {sp4} left!
+screen:24	Think, then strike.
+screen:25	Stay calm. Be exact!
+screen:27	Take your time...
+screen:28	Th-that's it!!
+screen:29	............
+screen:30	Hmm... I wonder?
+screen:31	Hm!
+screen:32	What's wrong!?
+screen:33	Time's running out!!
+screen:34	Are you stumped!?
+screen:35	Why've you stopped?
+screen:36	It's piling up!!
+screen:37	Do you give up?
+screen:38	Continue
+screen:39	Give up
+screen:40	That's enough!!
+screen:41	Out of moves...
+screen:42	Out of time...
+screen:43	Game over!
+screen:44	Splendid!!
+screen:45	Not bad at all!!
+screen:46	Keep it up!!
+screen:47	You have a knack!
+screen:48	Impressive!!
+screen:49	No ordinary pupil!?
+screen:50	Now that's amazing!!
+screen:51	{sp4}{sp2} Q{sp2}
+screen:52	Novice
+screen:53	Sensei
+screen:54	Expert
+screen:55	Master
+screen:56	Legend
+# Tutorial (17 columns, two lines per bubble; 58-64 are aliases of 57). Shown 74-75, 72-73, 76-77, 72-73
+screen:57	Welcome to the
+screen:65	Daruma Way!
+screen:66	I'll explain
+screen:67	just the basics.
+screen:68	First, I'll go
+screen:69	over each part.
+screen:70	If the timer cuts
+screen:71	the rope up top,
+screen:72	it's game over
+screen:73	for you!
+screen:74	If the pieces
+screen:75	stack to the top,
+screen:76	Or if you fill
+screen:77	the storehouse,
+screen:78	When you line up
+screen:79	matching pieces,
+screen:80	BOOM!! It attacks
+screen:81	the timer!!
+screen:82	That earns you
+screen:83	more game time!!
+screen:84	If the pieces
+screen:85	don't match,
+screen:86	they get pushed
+screen:87	up a row!
+screen:88	That's what we
+screen:89	call a do-over!
+screen:90	So, do you get
+screen:91	the general idea?
+screen:92	There are many
+screen:93	Daruma Ways...
+screen:94	Master every
+screen:95	last daruma!
+screen:96	Make the left
+screen:97	and right match!

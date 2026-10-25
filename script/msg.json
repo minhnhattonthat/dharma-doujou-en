@@ -3,129 +3,129 @@
   "id": 0,
   "ptr": "127E4",
   "jp": "だるま道中記{end}",
-  "en": ""
+  "en": "Daruma Trek{end}"
  },
  {
   "id": 1,
   "ptr": "127F2",
   "jp": "だるま修行編{end}",
-  "en": ""
+  "en": "Daruma Drill{end}"
  },
  {
   "id": 2,
   "ptr": "12800",
   "jp": "だるま問答{end}",
-  "en": ""
+  "en": "Daruma Quiz{end}"
  },
  {
   "id": 3,
   "ptr": "1280C",
   "jp": "ふたりで対決{end}",
-  "en": ""
+  "en": "2P Battle{end}"
  },
  {
   "id": 4,
   "ptr": "1281A",
   "jp": "だるま入門編{end}",
-  "en": ""
+  "en": "How to Play{end}"
  },
  {
   "id": 5,
   "ptr": "12828",
   "jp": "おぷしょん{end}",
-  "en": ""
+  "en": "Options{end}"
  },
  {
   "id": 6,
   "ptr": "12834",
   "jp": "は じ め か ら{end}",
-  "en": ""
+  "en": "New Game{end}"
  },
  {
   "id": 7,
   "ptr": "12848",
   "jp": "ぱ す わ ー ど{end}",
-  "en": ""
+  "en": "Password{end}"
  },
  {
   "id": 8,
   "ptr": "1285C",
   "jp": "どっちでプレイするの?{end}",
-  "en": ""
+  "en": "Who will you play as?{end}"
  },
  {
   "id": 9,
   "ptr": "12874",
   "jp": "直感…スピード勝負{nl}{nl}{nl} [6330] [6339] [6342] [634B]{end}",
-  "en": "",
+  "en": "Speed and instinct!{nl}{nl}{nl} [6330] [6339] [6342] [634B]{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 10,
   "ptr": "1289E",
   "jp": "じっくりと、読み勝負{nl}{nl}{nl} [6354] [635D] [6342] [634B]{end}",
-  "en": "",
+  "en": "Calm and foresight!{nl}{nl}{nl} [6354] [635D] [6342] [634B]{end}",
   "note": "24x24 picture tiles [63xx]: graphics, redrawn as English tiles (survey G2/G3); keep the words"
  },
  {
   "id": 11,
   "ptr": "128CA",
   "jp": "ぱ す わ ー ど{end}",
-  "en": ""
+  "en": "Password{end}"
  },
  {
   "id": 12,
   "ptr": "128DE",
   "jp": "またあそんでね{end}",
-  "en": ""
+  "en": "See you again!{end}"
  },
  {
   "id": 13,
   "ptr": "128EE",
   "jp": "ち が い ま す{end}",
-  "en": ""
+  "en": "Incorrect{end}"
  },
  {
   "id": 14,
   "ptr": "12902",
   "jp": "遠い遠いむかしのお話じゃ{end}",
-  "en": ""
+  "en": "A tale of long, long ago.{end}"
  },
  {
   "id": 15,
   "ptr": "1291C",
   "jp": "{mode:01}村々を結ぶ街道に化物たちが{nl}{nl}{nl}悪霊の置き物を、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}高く積み上げて民の往来を、{nl}{nl}{nl}じゃましておったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}",
-  "en": ""
+  "en": "{mode:01}On the roads that linked{nl}{nl}{nl}the villages, monsters had{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}piled haunted idols high,{nl}{nl}{nl}blocking travel, they say.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}"
  },
  {
   "id": 16,
   "ptr": "129B0",
   "jp": "{mode:01}時おなじ頃、 鎌倉に{nl}{nl}{nl}若いがちえのある小坊主と{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}神通力のすぐれたうつくしい{nl}{nl}{nl}巫女がおったそうで、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}二人はおさない頃より{nl}{nl}{nl}ことあるごとに何かと{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}競いあって、 大きく{nl}{nl}{nl}なったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}",
-  "en": ""
+  "en": "{mode:01}In Kamakura, at that time,{nl}{nl}{nl}lived a young, clever monk{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}and a lovely shrine maiden{nl}{nl}{nl}with great divine powers.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}Since childhood, the two{nl}{nl}{nl}had competed over every{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}little thing as they grew{nl}{nl}{nl}up, or so the story goes.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}"
  },
  {
   "id": 17,
   "ptr": "12AC0",
   "jp": "ある日のこと。    {nl}{nl}{nl}おしょうさまと村人たちが{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}悪霊の置物と化物の{nl}{nl}{nl}うわさ話をしているのを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}うしろでこっそりきいていた{nl}{nl}{nl}{mode:01}小坊主が、 だしぬけに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「みなさん!!  わたしが{nl}{nl}{nl}その化物どもを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}まとめて退治して{nl}{nl}{nl}さしあげましょう!!」と、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}いうやいなやおしょうさまが{nl}{nl}{nl}とめるのもきかずに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}修行をかねて悪霊退治の{nl}{nl}{nl}旅へとくりだしたのである。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}",
-  "en": ""
+  "en": "One day, the head priest{nl}{nl}{nl}and the villagers were{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}talking about the haunted{nl}{nl}{nl}idols and the monsters.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:01}The young monk, listening{nl}{nl}{nl}in from behind, spoke up:{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"Everyone!! I will get rid{nl}{nl}{nl}of those monsters for you,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}every last one of them!!\"{nl}{nl}{nl}he said,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}and before the head priest{nl}{nl}{nl}could stop him,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{mode:02}off he went to fight evil{nl}{nl}{nl}spirits and train as well.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {end}"
  },
  {
   "id": 18,
   "ptr": "12CAE",
   "jp": "これを知らされた{nl}{nl}{nl}巫女もまけじとばかりに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{page}{mode:01}小坊主のあとを{nl}{nl}{nl}おいかけていったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "When the shrine maiden{nl}{nl}{nl}heard of this, not to be{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{page}{mode:01}outdone, she set off after{nl}{nl}{nl}the young monk, they say.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 19,
   "ptr": "12D34",
   "jp": "道中やまあり、たにあり、{nl}{nl}{nl}はてさてどうなることやら{end}",
-  "en": ""
+  "en": "Many ups and downs await.{nl}{nl}{nl}How will it all turn out?{end}"
  },
  {
   "id": 20,
   "ptr": "12D6C",
   "jp": "お  し  ま  い{end}",
-  "en": ""
+  "en": "The End{end}"
  },
  {
   "id": 21,
@@ -194,49 +194,49 @@
   "id": 30,
   "ptr": "12ED8",
   "jp": "  段  位  認  定  状{nl}{nl}{nl}{nl}{nl}達磨道    を卒業する事を{nl}{nl}{nl}認め、     の段位を授ける{end}",
-  "en": ""
+  "en": "   Certificate of Rank{nl}{nl}{nl}Passed the Daruma Way{nl}{nl}Exam: {nl}{nl}{nl}Rank:{end}"
  },
  {
   "id": 31,
   "ptr": "12F42",
   "jp": "入門{end}",
-  "en": ""
+  "en": "Novice{end}"
  },
  {
   "id": 32,
   "ptr": "12F48",
   "jp": "師範{end}",
-  "en": ""
+  "en": "Sensei{end}"
  },
  {
   "id": 33,
   "ptr": "12F4E",
   "jp": "名人{end}",
-  "en": ""
+  "en": "Expert{end}"
  },
  {
   "id": 34,
   "ptr": "12F54",
   "jp": "達人{end}",
-  "en": ""
+  "en": "Master{end}"
  },
  {
   "id": 35,
   "ptr": "12F5A",
   "jp": "道主{end}",
-  "en": ""
+  "en": "Legend{end}"
  },
  {
   "id": 36,
   "ptr": "12F60",
   "jp": "とうとうわしを{nl}{nl}こえよったな。{key}{page}{rep:0F} {nl}{nl}{rep:0F} {page}免許皆伝じゃ。{nl}{nl}おめでとう。{key}{end}",
-  "en": ""
+  "en": "At last, you've{nl}{nl}surpassed me.{key}{page}{rep:0F} {nl}{nl}{rep:0F} {page}I grant you{nl}{nl}full mastery.{key}{page}{rep:0F} {nl}{nl}{rep:0F} {page}Well done.{key}{end}"
  },
  {
   "id": 37,
   "ptr": "12FB4",
   "jp": " 1P{rep:15} 2P{nl}{nl}{nl} {rep:04} 勝   負{rep:04}  {rep:04} 勝   負{end}",
-  "en": ""
+  "en": " 1P{rep:15} 2P{nl}{nl}{nl} {rep:04} W    L {rep:04}  {rep:04} W    L{end}"
  },
  {
   "id": 38,
@@ -312,61 +312,61 @@
   "id": 48,
   "ptr": "13016",
   "jp": "この二人、 なかがよいのやら{nl}{nl}{nl}わるいのやら…………。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}あかおにをいともかんたんに{nl}{nl}{nl}退治したあと、 われさきにと{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}競いあって、 鎌倉をあとに{nl}{nl}{nl}したそうな{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "Did these two get along,{nl}{nl}{nl}or not? Who could say...{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}Having beaten the red oni{nl}{nl}{nl}with ease, they raced each{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}other out of Kamakura,{nl}{nl}{nl}or so the story goes.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 49,
   "ptr": "130F2",
   "jp": "「こらっー!! まちなさい!!」{nl}{nl}{nl}「おにぎりをかえせーっっ!!」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}つたえられておる お話では、{nl}{nl}{nl}二人はとらえたねこまたを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}かいしんさせて、 もっていた{nl}{nl}{nl}おにぎりをわけあたえてやり{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}にがしてやったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "\"Hey!! Stop right there!!\"{nl}{nl}{nl}\"Return our rice balls!!\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}The story goes that the{nl}{nl}{nl}two caught the nekomata,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}made it mend its ways,{nl}{nl}{nl}shared their rice balls{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}with it, and let it go.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 50,
   "ptr": "13214",
   "jp": "こわれたからくりだるまの{nl}{nl}{nl}なかからでてきたのは、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}小さくてかわいらしい{nl}{nl}{nl}ゆうれいじゃったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「きゃーっ! かわいい。{nl}{nl}{nl}ほんとうに悪霊なの?」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「どうやら化物達に、りよう{nl}{nl}{nl}されていたみたいだな。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}二人はゆうれいをはなして{nl}{nl}{nl}やると、 村人達にあとで{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}きにしばっているあおおにを{nl}{nl}{nl}にがしてやるようにたのみ、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}村をあとにしたそうじゃ。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「あおおにはどうしましょ?」{nl}{nl}{nl}「ほっとけ、ほっとけ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "From inside the broken{nl}{nl}{nl}clockwork daruma came{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}a tiny, adorable ghost,{nl}{nl}{nl}or so they say.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"Aww! So cute! Is this{nl}{nl}{nl}really an evil spirit?\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"Looks like the monsters{nl}{nl}{nl}were using it.\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}The two let the ghost go,{nl}{nl}{nl}then asked the villagers{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}to free the blue oni tied{nl}{nl}{nl}to a tree later on,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}and left the village{nl}{nl}{nl}behind, they say.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"What about the blue oni?\"{nl}{nl}{nl}\"Leave him, leave him.\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 51,
   "ptr": "1344A",
   "jp": "いままでのおこないを{nl}{nl}{nl}ふかくはんせいしたかっぱは、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}うみでさかなをとって{nl}{nl}{nl}ごちそうしてくれたそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「いただきまーす。」{nl}{nl}{nl}「あっ だめよ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「わたしのぶんものこして{nl}{nl}{nl}おいてよ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "Deeply sorry for all it{nl}{nl}{nl}had done, the kappa{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}caught fish in the sea and{nl}{nl}{nl}treated them to a feast.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"Let's eat!\"{nl}{nl}{nl}\"Hey, wait!\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"Leave some for me too!\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 52,
   "ptr": "1355C",
   "jp": "「これじゃあまるでわたし達が{nl}{nl}{nl}いじめたみたいじゃない?」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「うーん・・・、まいったなぁ。{nl}{nl}{nl}おにぎりもとりかえしたし、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}さきをいそごうか?」{nl}{nl}{nl}「いきましょう。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}いぜんもらったおにぎりの{nl}{nl}{nl}おかえしにと、さしだされた{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}おにぎりをうけとって、{nl}{nl}{nl}ねこまたのきょうだいに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}みおくられながら小坊主達は{nl}{nl}{nl}さきをいそいだそうじゃ。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "\"Doesn't this make it look{nl}{nl}{nl}like we were the bullies?\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"Hmm... this is awkward.{nl}{nl}{nl}Our rice balls are back,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}so shall we hurry on?\"{nl}{nl}{nl}\"Let's go.\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}The nekomata siblings{nl}{nl}{nl}offered them rice balls{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}to repay the ones from{nl}{nl}{nl}before. Accepting them,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}the two hurried on their{nl}{nl}{nl}way as the siblings waved.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 53,
   "ptr": "1371E",
   "jp": "「あの二人、 またおいら達の{nl}{nl}{nl}さかなをくっちゃった………」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}二ひきのかっぱは、{nl}{nl}{nl}小坊主達のうしろすがたを{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}なごりおしそうに、ずっと{nl}{nl}{nl}みつめておったそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "\"Those two went and ate{nl}{nl}{nl}our fish again......\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}The two kappa gazed long{nl}{nl}{nl}at the departing pair,{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}sorry to see them go,{nl}{nl}{nl}or so they say.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 54,
   "ptr": "137FE",
   "jp": "すっかりなかよくなった{nl}{nl}{nl}さんにんは、ほしがでるまで{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}かたりあっていたそうな。{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「わしはおまえ達のような{nl}{nl}{nl}おもいあがった人間どもを、{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}こらしめておっただけじゃ!!{nl}{nl}{nl}悪い事などしとらんわい。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「ほんと、 かわいげのない{nl}{nl}{nl}やつだな。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「すなおにあやまりなさい。」{nl}{nl}{nl}「いやじゃ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}",
-  "en": ""
+  "en": "Now the best of friends,{nl}{nl}{nl}the three talked on and on{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}until the stars came out.{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"All I did was teach a{nl}{nl}{nl}lesson to stuck-up humans{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}like you!! I did nothing{nl}{nl}{nl}wrong, I tell you.\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"What a sourpuss.\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"Just say you're sorry.\"{nl}{nl}{nl}\"I won't!\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}{end}"
  },
  {
   "id": 55,
   "ptr": "13996",
   "jp": "「やれやれ、 やっとおわった。{nl}{nl}{nl}おしょうさまが、しんぱいして{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}まっておいでだろうなぁ。」{nl}{nl}{nl}「じつは、わたし神主さまに{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}ないしょで来ているの。きっと{nl}{nl}{nl}おこっていらっしゃるわ。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}「……………。」{nl}{nl}{nl}「わたし達まだまだ修行した{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}ほうがいいとおもわない?」{nl}{nl}{nl}「そうだね。 そうしよう。」{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}このあと二人の旅はまだまだ{nl}{nl}{nl}つづくのじゃが、ひとまずは{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}  めでたし  めでたし。{key}{end}",
-  "en": ""
+  "en": "\"Phew, it's finally over.{nl}{nl}{nl}The head priest must be{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}waiting, worried sick.\"{nl}{nl}{nl}\"Actually, I left without{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}telling my shrine master.{nl}{nl}{nl}He must be furious.\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}\"......\"{nl}{nl}{nl}\"Don't you think we still{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}need more training?\"{nl}{nl}{nl}\"Yeah. Let's do that.\"{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}Their journey goes on{nl}{nl}{nl}and on, but for now...{key}{page}{rep:1A} {nl}{nl}{nl}{rep:1A} {page}   Happily ever after.{key}{end}"
  },
  {
   "id": 56,
   "ptr": "13B88",
   "jp": "つづける{nl}{nl}{nl}やめる{end}",
-  "en": ""
+  "en": "Continue{nl}{nl}{nl}Quit{end}"
  },
  {
   "id": 57,
   "ptr": "13B9E",
   "jp": "EXECTIVE PRODUCER{end}",
-  "en": "",
+  "en": "EXECUTIVE PRODUCER{end}",
   "note": "credits: romaji, keep (D3); fix only typos"
  },
  {

@@ -21,7 +21,7 @@ in a 3x zoom; "guess" = not yet seen with a full-width line: measure before rele
 | prompt | msg 8 | 21 x 1 | measured: plate from column 6, 22nd character on the frame (training_char) |
 | password | msg 11-13 | 14 x 1 | guess: not reached with text yet (password_end warp's Start doesn't confirm; find the confirm input) |
 | certificate | msg 30 | 26 x 6 | measured: lines from column 5 to the border at column 31 (quiz_break); see below |
-| rank | msg 31-35, screen 52-56 | 6 x 1 | guess: certificate slot (has ~19). The bottom-right quiz rank plate (G10) is NOT screen 52-56: the marker build still shows 入門 there and no BG map holds the font's 入門 tiles; treat it as graphics. Where screen 52-56 show is not yet seen |
+| rank | msg 31-35, screen 52-56 | 6 x 1 | screen 52-56: the course name drawn at column 0 of the quiz header, with the problem number at column 8 (measured, see below). Certificate slot (msg 31-35) has ~19; same names for consistency. The bottom-right quiz rank plate (G10) is graphics |
 | record | msg 37 | layout | code draws the win counts at fixed columns; keep every space and `{rep}` count, 勝/負 -> 2-column labels |
 | end | msg 20 | 26 x 1 | guess |
 | qchoice | screen 38, 39 | 8 x 1 | guess |
@@ -31,7 +31,16 @@ in a 3x zoom; "guess" = not yet seen with a full-width line: measure before rele
   column 11 on row 11 (the course passed) and another at column 11 on row 14 (the rank awarded), over whatever the
   text left there. So in English each of those two rows must have exactly 6 columns of text (label + space) before
   the slot and nothing after it; other rows are free. Check in the quiz_break warp.
-- **msg 37 (versus record 対戦成績):** win counts are drawn by code at about columns 6 and 11 of the second row.
+- **msg 37 (versus record 対戦成績):** measured 2026-10-26 (qa build with AB/CD/EF/GH for 勝/負, versus_win warp,
+  `--hold 1200 --mash 400`): the code draws each count (one big digit) in the column just left of each label, i.e.
+  string columns 4, 9, 21, 26; labels at 5-6, 10-11, 22-23, 27-28. English uses W / L there (D10).
+- **Quiz header (screen 51, and 14 with a 2-digit slot):** measured (qa build, quiz_play / quiz_lv5): the code
+  draws the course name (screen 52-56) at column 0, in full, before the string (a 10-letter name showed whole
+  where the string skips), then the problem number at columns 8-9 (8-11 for 14). So rank names are at most 6
+  letters and the English is `{sp4}{sp2} Q{sp4}` -> "Novice Q 1".
+- **Quiz number slots (screen 15-17, 21-23):** the number is drawn right-aligned in the JP `{sp4}` slot (columns
+  0-3 for 15-17; 5-8 for 21-23); tools/tl.py keeps every `{sp4}` at its JP column.
+- **Tutorial order (seen in the tutorial warp):** 74-75, 72-73, 76-77, 72-73: "game over" follows each condition.
 - **Engine 2 (screen block):** `{spN}` skips N tiles without clearing them: a skipped tile shows the previous line's
   glyph. English spaces use a drawn blank glyph (tools/font.py), and `{sp4}` slots (screen 14-17, 21-23, 51) are
   where the game draws a number: keep them.

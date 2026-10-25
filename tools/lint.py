@@ -33,8 +33,8 @@ BOXES = {
     "prompt": (21, 1, "measured"),       # msg 8 character-select plate
     "password": (14, 1, "guess"),
     "certificate": (26, 6, "measured"),  # msg 30: lines from column 5; rank names drawn at column 11, rows 11 and 14
-    "rank": (6, 1, "guess"),             # rank names: certificate slot and the engine-2 rank plate
-    "record": (32, 1, "guess"),          # msg 37 versus record: code draws digits at fixed columns
+    "rank": (6, 1, "measured"),          # rank names: certificate slot; quiz header (number drawn at column 8)
+    "record": (32, 2, "guess"),          # msg 37 versus record (1P/2P row, count row): code draws the counts
     "end": (26, 1, "guess"),
     "qchoice": (8, 1, "guess"),
 }
