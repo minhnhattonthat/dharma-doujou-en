@@ -2,36 +2,28 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 7 (insert, fit, check) done; next 8 (QA in the emulator). Last builds 2026-10-26:
-  build/dharma_en.sfc sha1 34049c83... (full English script), build/dharma_marker.sfc sha1 444d4d5b...; smoke ok.
+- **Phase:** 8 (QA in the emulator) in progress. Last build 2026-10-26: build/dharma_en.sfc sha1 e5b62a60...
 - **Done:**
-  - English font: `fonts/en8x16.txt` (drawn, MIT) -> `tools/font.py` draws it into kana slots of both engines' fonts
-    (res 1-4 BG3 2bpp; res 34-35 BG1 4bpp) and builds the English tables in code. Engine 2 space = a drawn blank
-    glyph (its `{spN}` skips leave stale tiles). D9: fixed 8 px glyphs, no VWF. docs/re/text.md "English font".
-  - build.py: `en` strings encode with the English table (fallback `jp`), text spills into bank free space,
-    `--marker`, `--qa block:id=Text` overrides. Free space trap-tested.
-  - Width gate: docs/re/windows.md + tools/lint.py BOXES.
-  - Translation: `script/en.tsv` is the only source of `en` (119 strings / 164 units); `tools/tl.py merge`.
-    Reviewer: Approved after fixes.
-  - Phase 7 checks (all in build/check): every write logged and romdiff-checked, and must sit inside
-    `tools/ranges.txt` (build fails otherwise); lint: control codes JP == EN except layout ({nl} {page} {key} {rep}
-    {sp} {down}; {key}/{page} may grow), Japanese with no English is an error (aliased ids count once). Stale-reader
-    scan: strings reached only via the pointer tables (docs/re/text.md). `jp_left.py` on the text ranges: 0 runs
-    (cmd: `jp_left.py build/dharma_en.sfc --tbl tbl/jp.tbl --le16 --range 127E4-13DD1 --range 16910-17FFF`, and
-    jp2.tbl with 25B06-2609B, 270A0-27FFF). In game: msg 36 master (3 pages) and msg 30 certificate ok
-    (warp quiz_master / quiz_break).
+  - English font, build, width gate, full script (reviewed), phase 7 checks: see git log and docs/re/text.md.
+  - Graphics text (docs/re/graphics.md G-rows; edits in tools/gfx_edits.py, applied by `tools/gfx.py gen`, written by
+    the build): G1 title DOJO, G2, G4-G7 (HUD, pause plates, training crow countdown), G9, G13, G16-G20 English.
+    G3/G10/G15 are text. G11 (place-name plates) and G14 (release date, res 67) unused: never shown/decoded in any
+    warp (`tools/debug/reslog.lua` hooks both resource loaders).
+  - Quiz pause plate is a BG1 map stream at 0xB050 naming engine-2 kana tiles: `font.PLATES` points it at the
+    English glyphs.
+  - QA tour: `tools/tour.py` (all scenes in tools/debug/scenes.lua) -> work/qa/tour (130 sheets); manifest
+    work/qa/manifest.tsv; chunks work/qa/chunks; brief docs/visual-qa-brief.md; verdicts work/qa/verdicts.
 - **Next:**
-  1. Phase 8: QA tour of changed scenes via `tools/warp.py` (scene list in tools/debug/scenes.lua), contact sheets,
-     `qa_gate.py` manifest + visual-qa subagents until `qa_gate.py check` exits 0. Graphics text rows (G1-G18 in
-     docs/re/graphics.md) are phase 8's done-when too: they are still Japanese, so phase 8 includes redrawing them.
-  2. Still guessed boxes (lint warns 7): password msg 11-13 (find the confirm input for `password_end`), record
-     msg 37, end msg 20, qchoice screen 38/39. Measure in phase 8 QA.
-  3. Minor review items deferred to one polish pass: msg:49.1 "Return our rice balls!!" stiff (28-col fix
-     doesn't fit); msg:36.2 "Well done." vs Congratulations (16 > 15 cols); msg:19 loses the mountains/valleys
-     image (kept the idiom "ups and downs"); screen:15-17 drop そろえよ; msg:12 "Play again soon!" (16 > 14).
-  4. Graphics text: G1-G18 in docs/re/graphics.md; 24x24 picture strings 9, 10, 22-29 (tails kept as JP
-     pictures); yellow HUD "あと・N手" under the quiz bubble; 免許皆伝 plate in the master scene.
-- **Open bugs:** none.
+  1. Finish the visual-QA gate: fix each `issue`, re-tour the scene, `qa_gate.py init` again, re-review, until
+     `qa_gate.py check work/qa/manifest.tsv work/qa/verdicts` exits 0.
+  2. G12 stack warning 積み上がり注意!! (OBJ, res 8, in WRAM from boot): no route reaches it (story never adds
+     pieces; training tops out under the crow's drops with no banner, also with A mashed). Needs its trigger found
+     (code reading the res 8 banner tiles) or a playtester run of training mode.
+  3. Res 37 also holds ちょっとたんま and a small おぷしょん with no screen found (likely unused).
+  4. Still guessed boxes (lint warns): password msg 11-13, record msg 37, end msg 20, qchoice screen 38/39.
+  5. Minor review items for one polish pass: msg:49.1, msg:36.2, msg:19, screen:15-17, msg:12 (see git history of
+     this file for detail).
+  6. Phase 9: release script runs `qa_gate.py check`; jp_left; patch + verify; README hashes.
+- **Open bugs:** none known beyond the QA gate.
 - **Waiting on the user:** nothing. Defaults I chose, change if you prefer: D8 "Dharma Dojo", D9 fixed-width font,
-  D10 names that fit fixed layouts (Daruma Trek/Drill, How to Play, ranks Novice/Sensei/Expert/Master/Legend,
-  versus record W/L).
+  D10 names that fit fixed layouts. Title logo: the original's gold DHARMA stays, the big だるま道場 became DOJO.

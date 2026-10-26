@@ -7,6 +7,7 @@
 SC = { scenes = {} }
 local S = SC.scenes
 local function cat(...) local t = {}; for _, l in ipairs({ ... }) do for _, s in ipairs(l) do t[#t + 1] = s end end; return t end
+local function presses(b, n, gap) local t = {}; for _ = 1, n do t[#t + 1] = { press = b }; t[#t + 1] = { frames = gap } end; return t end
 -- Menu screens inside mode 1 are told apart by the last menu string drawn ($0238).
 local MAIN, NEWPW, CHAR, LIMIT = 0xA1, 0xA5, 0xA3, 0xA4
 local function on(id) return function(e) return e.at(1, 1) and e.r16(0x238) == id end end
@@ -44,7 +45,7 @@ S.map = cat(menu(0), { until_at(7, 1, 60, "a") })
 S.stage1 = story_play()
 S.stage1_pause = cat(story_play(), { { frames = 560 }, { press = "start" }, { frames = 100 } })  -- つづける / こうさん
 S.stage1_hurry = cat(story_play(), { { frames = 1800 } })  -- time running low: HURRY UP 急げ banner (crows)
-S.stage1_moves = cat(S.story_limit, { { press = "down" }, { frames = 20 }, pick(LIMIT), until_at(9, 1, 30, "a") })
+S.stage1_moves =cat(S.story_limit, { { press = "down" }, { frames = 20 }, pick(LIMIT), until_at(9, 1, 30, "a") })
 -- stageN: clear stage N-1's last round; arrives at the outro scene (mode 13), then map, card, play follow.
 for n = 2, 8 do
   S["stage" .. n] = cat(story_play(), { clear_as(n - 2, 2), until_at(13, nil, 150) })  -- 150: past the fade-in
@@ -84,7 +85,6 @@ S.quiz_gameover = cat(S.quiz_char, { pick(CHAR), until_at(11, 1, 60), until_at(1
 S.versus_char = cat(menu(3), { screen(CHAR) })
 local vs_start = { wait = function(e) return e.at(8, 2) end, delay = 60, mash = "a", every = 120, port = "both" }
 S.versus_play = cat(S.versus_char, { vs_start })
-local function presses(b, n, gap) local t = {}; for _ = 1, n do t[#t + 1] = { press = b }; t[#t + 1] = { frames = gap } end; return t end
 -- quiz pause: A through the master's lines, then start once the problem runs
 S.quiz_pause = cat(S.quiz_play, presses("a", 12, 60), { { frames = 300 }, { press = "start" }, { frames = 100 } })
 S.versus_win = cat(S.versus_char, { vs_start, { poke = { [0x190A] = 2, [0x024E] = 1 } }, until_at(13, nil, 60) })
