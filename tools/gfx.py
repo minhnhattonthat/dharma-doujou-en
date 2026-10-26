@@ -166,8 +166,9 @@ def candidates(place, orig, addr, bpp, vram=None):
     for r, base in place.items():
         if base <= addr and addr + 8 * bpp <= base + len(resource(orig, r)):
             off = addr - base
-            if vram is None:
-                return [(r, off)]
+            if vram is None or resource(orig, r)[off:off + 8 * bpp] == vram[addr:addr + 8 * bpp] and any(
+                    vram[addr:addr + 8 * bpp]):
+                return [(r, off)]  # the resource loaded there wins over identical copies elsewhere
     if vram is None or not any(vram[addr:addr + 8 * bpp]):
         return []
     tile = bytes(vram[addr:addr + 8 * bpp])

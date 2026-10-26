@@ -35,6 +35,8 @@ COND = ROOT / "fonts" / "en_cond.txt"
 # words drawn with the condensed glyphs into a fixed number of cells, then blank cells up to the word's length,
 # when a whole string is the word: the quiz rank plate shows 4 cells of strings 52-56 (docs/re/windows.md)
 LIGATURES = {"screen": (("Novice", "Sensei", "Expert", "Master", "Legend"), 4)}
+# BG1 map streams with engine-2 kana tiles baked in (patch_plates): quiz pause plate つづける / こうさん, bank $81
+PLATES = [(0xB050,("Continue", "Give Up"))]
 
 
 def parse(src, width=7):
@@ -205,6 +207,20 @@ def patch(rom, put, free):
                 blob = rle.encode(bytes(data[r]), bank << 16 | 0x8000 | (off & 0x7FFF))
                 put(rle.TABLE + 3 * r, struct.pack("<HB", 0x8000 | (off & 0x7FFF), bank), f"font-res{r}-ptr")
             put(off, blob, f"font-res{r}")
+
+
+def patch_plates(rom, put):
+    """Map streams that name engine-2 kana tiles directly instead of drawing a string: point them at the English
+    glyphs. Each row is 60 42 07 + 8 tile low bytes (tile page 0x2xx), rows top / bottom / top / bottom."""
+    code = assign("screen")
+    for off, lines in PLATES:
+        for i, text in enumerate(lines):
+            tiles = [code[ch] & 0x1FFF for ch in text.ljust(8)]
+            assert all(0x200 <= t and t + 16 <= 0x2FF for t in tiles), f"plate {text!r}: glyph outside page 2"
+            for half, row in enumerate((tiles, [t + 16 for t in tiles])):
+                at = off + (2 * i + half) * 11
+                assert rom.orig[at:at + 3] == b"\x60\x42\x07", f"plate row at 0x{at:X} is not a 60 42 07 run"
+                put(at + 3, bytes(t & 0xFF for t in row), f"font-plate-{off:X}")
 
 
 def alloc(orig, free, n):

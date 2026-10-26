@@ -36,6 +36,16 @@ def test_pick_follows_the_majority_source():
     assert gfx.pick(c)[(0x840, "c")] == ("rom", 0x1840)
 
 
+def test_candidates_prefer_the_resource_loaded_there(monkeypatch):
+    # the quiz 手 tiles: res 64 is loaded at that VRAM spot, res 37 holds an identical copy
+    tile = bytes(range(1, 33))
+    res = {37: bytes(64) + tile, 64: tile}
+    monkeypatch.setattr(gfx, "resource", lambda orig, r: res.get(r, b""))
+    vram = bytearray(0x10000)
+    vram[0x9000:0x9020] = tile
+    assert gfx.candidates({64: 0x9000}, b"", 0x9000, 4, vram) == [(64, 0)]
+
+
 def test_rank_ligature_fills_six_columns():
     s = font.ligate("screen", "Novice{end}")
     assert s.endswith("  {end}") and len(s) == 6 + len("{end}")

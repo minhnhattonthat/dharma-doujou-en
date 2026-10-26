@@ -20,7 +20,23 @@ VS = dict(dump="versus_play/ppu_001410", layer="bg1", erase=list(range(1, 16)), 
 WIN = dict(dump="versus_win/ppu_001560", layer="bg1", erase=list(range(1, 16)), fill=0, ink=2,
            edge=4, edge2=14, font="serif", cap=30, gap=1)
 
+# training-mode crow's bubble (BG1, res 37 glyphs; dark brown 12 / 11 / 10 on cream 15). Tile 0x42 (top-left of
+# っ!) is the bubble's blank padding, so それっ! keeps it blank and the English sits in そ れ.
+CROW = dict(layer="bg1", erase=[10, 11, 12], fill=15, ink=12, bitmap=True, pad=0)
+
 EDITS = [
+    # G7 crow countdown 五秒前 / 四 / 三 / 二 / 一 / それっ!
+    dict(CROW, name="G7 crow 5", dump="training_play/ppu_005280", rect=(176, 120, 48, 16), text="5 sec"),
+    dict(CROW, name="G7 crow 4", dump="training_play/ppu_005340", rect=(192, 120, 16, 16), text="4"),
+    dict(CROW, name="G7 crow 3", dump="training_play/ppu_005400", rect=(192, 120, 16, 16), text="3"),
+    dict(CROW, name="G7 crow 2", dump="training_play/ppu_005460", rect=(192, 120, 16, 16), text="2"),
+    dict(CROW, name="G7 crow 1", dump="training_play/ppu_005520", rect=(192, 120, 16, 16), text="1"),
+    dict(CROW, name="G7 crow now", dump="training_play/ppu_005610", rect=(176, 120, 32, 16), text="Now!"),
+    dict(CROW, name="G7 crow now end", dump="training_play/ppu_005610", rect=(208, 120, 16, 16), text=""),
+    # G1 title logo だるま道場 (BG1, res 27, pal 3) under the game's own gold DHARMA -> DOJO.
+    # Dark purple 8 with purple rims 6 / 5 on transparent 0; the kana fly in one 48 px block at a time.
+    dict(name="G1 logo", dump="title/ppu_001740", layer="bg1", rect=(8, 32, 240, 48), text="DOJO",
+         erase=[5, 6, 7, 8], fill=0, ink=8, edge=6, edge2=5, font="serif", cap=38, gap=10, bold=4),
     # G5 continue screen: 再度挑戦 / 出直す
     dict(GO, name="G5 retry", rect=(104, 64, 64, 16), text="Try Again"),
     dict(GO, name="G5 quit", rect=(104, 88, 48, 16), text="Quit"),

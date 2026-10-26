@@ -60,6 +60,8 @@ S.gameover_quit = cat(S.gameover, { { press = "down" }, { frames = 20 }, { press
 S.training_char = cat(menu(1), { screen(CHAR) })
 S.training_diff = cat(S.training_char, { pick(CHAR), until_at(10, 1, 60) })
 S.training_play = cat(S.training_diff, { { press = "a" }, { frames = 300 } })
+S.training_pause = cat(S.training_play, { { frames = 300 }, { press = "start" }, { frames = 100 } })
+S.training_crow = cat(S.training_play, { { frames = 3560 } })  -- crow's bubble countdown 五秒前 .. それっ!
 
 -- Quiz (問答)
 S.quiz_menu = cat(menu(2), { screen(NEWPW) })
@@ -82,6 +84,9 @@ S.quiz_gameover = cat(S.quiz_char, { pick(CHAR), until_at(11, 1, 60), until_at(1
 S.versus_char = cat(menu(3), { screen(CHAR) })
 local vs_start = { wait = function(e) return e.at(8, 2) end, delay = 60, mash = "a", every = 120, port = "both" }
 S.versus_play = cat(S.versus_char, { vs_start })
+local function presses(b, n, gap) local t = {}; for _ = 1, n do t[#t + 1] = { press = b }; t[#t + 1] = { frames = gap } end; return t end
+-- quiz pause: A through the master's lines, then start once the problem runs
+S.quiz_pause = cat(S.quiz_play, presses("a", 12, 60), { { frames = 300 }, { press = "start" }, { frames = 100 } })
 S.versus_win = cat(S.versus_char, { vs_start, { poke = { [0x190A] = 2, [0x024E] = 1 } }, until_at(13, nil, 60) })
 S.tutorial = cat(menu(4), { screen(CHAR), pick(CHAR), until_at(6, 1, 120) })
 S.options = cat(menu(5), { until_at(5, 1, 60) })

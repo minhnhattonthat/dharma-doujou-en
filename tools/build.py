@@ -153,6 +153,7 @@ def build(orig, out=OUT, texts=None):
     if english:
         free = list(font.FREE)
         font.patch(rom, rom.put, free)
+        font.patch_plates(rom, rom.put)
         gfx.patch(rom, rom.put, free)
     data, _ = bps.snes_checksum(rom.data)
     rom.put(0x7FDC, data[0x7FDC:0x7FE0], "checksum")

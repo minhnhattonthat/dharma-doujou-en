@@ -1,6 +1,7 @@
 # Allowed write ranges (file offsets, inclusive hex). build.py fails on any write outside them.
 # Sources: docs/re/text.md (blocks, tables), docs/re/graphics.md (free space, resources), tools/font.py.
 7FDC-7FDF     header checksum + complement
+B050-B07B    quiz pause plate map stream (font.py PLATES)
 12724-127D9   msg pointer table (91 words)
 127E4-13DD1   msg text block
 16910-17FFF   msg free space (bank $82)
@@ -10,6 +11,7 @@
 38003-3800E   resource table entries 1-4 (engine 1 font)
 38066-3806B   resource table entries 34-35 (engine 2 font)
 391DB-3CE88   resources 1-4: engine 1 font, recompressed in place
+5A6F3-5C326   resource 27: title logo (G1)
 63A55-6654B   resources 34-35: engine 2 font, recompressed in place
 38000-380F8   resource table, for a graphics resource that moves to free space (tools/gfx.py)
 30000-3117A   resource 80: 2P record header scroll (G17)
