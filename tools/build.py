@@ -69,11 +69,18 @@ def pack(rom, block, strings):
     alias = [first.setdefault(off, i) for i, off in enumerate(ptr_offsets(rom.orig, block))]
     regions = [(start, end, bytearray()), (*extra, bytearray())]
     ptrs = []
+    orig = unpack(rom.orig, block)
     for i, s in enumerate(strings):
         if alias[i] != i:
             ptrs.append(ptrs[alias[i]])
             continue
         lang, s = s if isinstance(s, tuple) else ("jp", s)
+        if lang != "jp" and orig[i].isascii():
+            try:  # all-Latin original (credits): keep the game's own glyphs when they spell the English
+                codecs["jp"].encode(s)
+                lang = "jp"
+            except ValueError:
+                pass
         if lang not in codecs:
             codecs[lang] = font.codec(name)
         enc = codecs[lang].encode(font.ligate(name, s) if lang != "jp" else s)

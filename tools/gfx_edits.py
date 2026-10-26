@@ -100,8 +100,8 @@ EDITS = [
     dict(name="G7 pause", dump="stage1_pause/ppu_007380", layer="bg1", rect=(104, 88, 62, 32),
          text="Continue\nGive Up", erase=[11, 12], fill=15, ink=12, bitmap=True, align="l", pad=0),
     # G20 time running low: HURRY UP 急げ HURRY UP banner (OBJ, crows)
-    dict(name="G20 hurry", dump="stage1_hurry/ppu_007740", layer="obj", rect=(112, 59, 32, 18), text="NOW!",
-         erase=list(range(15)), fill=15, ink=[6, 7, 2, 2, 3], edge=14, font="sans", gap=1),
+    dict(name="G20 hurry", dump="stage1_hurry/ppu_007740", layer="obj", rect=(112, 58, 32, 22), text="NOW!",
+         erase=list(range(15)), fill=15, ink=[6, 7, 2, 2, 3], edge=14, font="sans", cap=14, gap=1, dy=-1),
     # G2 mode select: 時間制限 / 手数制限 (msg 9, 10) -> TIME LIMIT / MOVE LIMIT; 制限 is shared by both
     # (en.tsv msg 9/10 set the pictures side by side as two words)
     dict(name="G2 time", pics=[0x6330, 0x6339], text="TIME", erase=[1, 2, 3], fill=0, ink=3, shadow=2, cap=16,
