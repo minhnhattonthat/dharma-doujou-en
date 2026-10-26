@@ -62,6 +62,23 @@ EDITS = [
     # G17 2P record header 対戦成績 scroll (BG1, res 80): black 7 / grey 8 9 on paper 3-6
     dict(name="G17 results", dump="versus_win/ppu_001830", layer="bg1", rect=(80, 24, 104, 32), text="Results",
          erase=[7, 8, 9], halo=1, grain="h", ink=7, shadow=8, font="serif", cap=18, gap=1),
+    # G16 password header plate ぱすわーど (BG1, res 81 tiles 70-AE: the options plate's twin)
+    dict(name="G16 password", dump="password/ppu_001680", layer="bg1", rect=(64, 24, 120, 32), text="Password",
+         erase=[1, 6, 14], ink=1, shadow=14, shadow_full=True, font="serif", cap=19, gap=1),
+    # G18 quiz certificate seal たいへん / よくできました (OBJ, res 66): pale pink 15 outlined magenta 4 on the flower
+    dict(name="G18 stamp", dump="quiz_break/ppu_002490", layer="obj", rect=(12, 148, 58, 42), text="Well\nDone!",
+         erase=[4, 15], ink=15, edge=4, font="sans", cap=12, lead=3, gap=1),
+    # the stamp's lower Japanese strokes are in the outline colours 2/3: clear them inside the outline only
+    dict(name="G18 stamp low", dump="quiz_break/ppu_002490", layer="obj", rect=(16, 184, 52, 4), text="",
+         erase=[2, 3, 4], tex=(20, 165, 2, 2)),
+    dict(name="G18 stamp mid", dump="quiz_break/ppu_002490", layer="obj", rect=(16, 172, 52, 12), text="",
+         erase=[2, 3], tex=(20, 165, 2, 2)),
+    # G7 pause menu (all modes): つづける / こうさん, res 37
+    dict(name="G7 pause", dump="stage1_pause/ppu_007380", layer="bg1", rect=(104, 88, 62, 32),
+         text="Continue\nGive Up", erase=[11, 12], fill=15, ink=12, bitmap=True, align="l", pad=0),
+    # G20 time running low: HURRY UP 急げ HURRY UP banner (OBJ, crows)
+    dict(name="G20 hurry", dump="stage1_hurry/ppu_007740", layer="obj", rect=(112, 59, 32, 18), text="NOW!",
+         erase=list(range(15)), fill=15, ink=[6, 7, 2, 2, 3], edge=14, font="sans", gap=1),
     # G2 mode select: 時間制限 / 手数制限 (msg 9, 10) -> TIME LIMIT / MOVE LIMIT; 制限 is shared by both
     # (en.tsv msg 9/10 set the pictures side by side as two words)
     dict(name="G2 time", pics=[0x6330, 0x6339], text="TIME", erase=[1, 2, 3], fill=0, ink=3, shadow=2, cap=16,

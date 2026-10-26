@@ -60,6 +60,8 @@ class Dump:
             return self.obj_cells()
         assert self.r("bgMode") == 1, f"{self.prefix}: BG mode {self.r('bgMode')}, mode 1 only"
         n = {"bg1": 0, "bg2": 1, "bg3": 2}[layer]
+        if not (self.r("mainScreenLayers") | self.r("subScreenLayers")) >> n & 1:
+            return []  # layer off: its leftover tilemap shows nothing
         bpp = 2 if n == 2 else 4
         L = f"layers[{n}]."
         chr_, tmap = self.r(L + "chrAddress") * 2, self.r(L + "tilemapAddress") * 2

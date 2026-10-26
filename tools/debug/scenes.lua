@@ -42,6 +42,8 @@ S.story_limit = cat(S.story_menu, { pick(NEWPW), screen(LIMIT) })           -- t
 S.story_intro = cat(S.story_limit, { pick(LIMIT), until_at(3, 0, 200, "a") })
 S.map = cat(menu(0), { until_at(7, 1, 60, "a") })
 S.stage1 = story_play()
+S.stage1_pause = cat(story_play(), { { frames = 560 }, { press = "start" }, { frames = 100 } })  -- つづける / こうさん
+S.stage1_hurry = cat(story_play(), { { frames = 1800 } })  -- time running low: HURRY UP 急げ banner (crows)
 S.stage1_moves = cat(S.story_limit, { { press = "down" }, { frames = 20 }, pick(LIMIT), until_at(9, 1, 30, "a") })
 -- stageN: clear stage N-1's last round; arrives at the outro scene (mode 13), then map, card, play follow.
 for n = 2, 8 do
