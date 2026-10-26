@@ -3,8 +3,8 @@
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
 - **Phase:** 9 (release) done 2026-10-26: `tools/release.py` built and verified release/Dharma_Doujou_EN_v1.0.zip
-  (BPS patch 87,870 bytes + README.txt; patched crc32 2224E204, sha1 b075a46baf04...). Not published: that is the
-  user's call (`gh release create` with the zip; see the skill's references/pipeline.md §Publish).
+  (BPS patch 87,870 bytes + README.txt; patched crc32 2224E204, sha1 b075a46baf04...). Published 2026-10-26 at the
+  user's request: https://github.com/minhnhattonthat/dharma-doujou-en/releases/tag/v1.0 (repo made public).
 - **Done:**
   - English font, build, width gate, full script (reviewed), phase 7 checks: see git log and docs/re/text.md.
   - Graphics text (docs/re/graphics.md G-rows; edits in tools/gfx_edits.py, applied by `tools/gfx.py gen`, written by
@@ -22,6 +22,6 @@ Updated at the end of every session. Keep it to what the next session needs; his
   2. Still guessed boxes (lint warns): password msg 11-13, record msg 37, end msg 20, qchoice screen 38/39.
   3. Minor review items: msg:49.1, msg:36.2, msg:19, screen:15-17, msg:12 (see git history of this file).
 - **Open bugs:** none known.
-- **Waiting on the user:** publishing v1.0 (zip ready in release/). Defaults I chose, change if you prefer:
+- **Waiting on the user:** nothing. Defaults I chose, change if you prefer:
   D8 "Dharma Dojo", D9 fixed-width font, D10 names that fit fixed layouts, D11 千両 piece art kept. Title logo: the
   original's gold DHARMA stays, the big だるま道場 became DOJO.
