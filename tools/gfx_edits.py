@@ -6,7 +6,7 @@ Each edit: name ("G<row> what"), then either
 and the drawing: text ("\n" between lines), ink (index, or a list of indices top to bottom), edge (1 px ring) /
 shadow (1 px down-right) indices, erase (indices of the Japanese to paint over), fill (paint index; default: the
 nearest kept pixel, for textured plates), font (sans / serif; bitmap=True: fonts/en8x16.txt), cap (cap height px),
-gap (px between letters), lead (px between lines), bold (px of extra width), align (c l r), dx, dy, pad.
+gap (px between letters), lead (px between lines), bold (px of extra width), align (c l r), dx, dy, pad, shear (px up per px right: a slanted sign).
 """
 
 # wood plates: the text tiles hold text + wood only; repaint them whole from a clean 16x16 patch of the wood
@@ -25,6 +25,13 @@ WIN = dict(dump="versus_win/ppu_001560", layer="bg1", erase=list(range(1, 16)), 
 CROW = dict(layer="bg1", erase=[10, 11, 12], fill=15, ink=12, bitmap=True, pad=0)
 
 EDITS = [
+    # G12 stack warning 積み上がり注意!! (BG1, res 8 tiles 50-7D, DMA'd from WRAM $7F:0A00): white 15 shadow 9 on red 12.
+    # Blinks at the top in training once the stack is high (training_crow, EN build dump: the run is input-timed).
+    dict(name="G12 stack", dump="training_crow/ppu_005760", layer="bg1", rect=(40, 0, 184, 16),
+         text="STACK TOO HIGH!!", erase=[9, 15], fill=12, ink=15, shadow=9, font="sans", cap=10, gap=1, pad=0),
+    # G21 story opening picture: the slanted wooden road sign かまくら (BG1 res 21, pal 2): ink 15 on wood 8 9 10
+    dict(name="G21 sign", dump="story_intro/ppu_002640", layer="bg1", rect=(59, 94, 37, 34), text="Kamakura",
+         erase=[10, 15], ink=15, font="sans", cap=7, gap=0, shear=0.45, pad=0),
     # G7 crow countdown 五秒前 / 四 / 三 / 二 / 一 / それっ!
     dict(CROW, name="G7 crow 5", dump="training_play/ppu_005280", rect=(176, 120, 48, 16), text="5 sec"),
     dict(CROW, name="G7 crow 4", dump="training_play/ppu_005340", rect=(192, 120, 16, 16), text="4"),

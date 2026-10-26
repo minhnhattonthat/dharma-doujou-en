@@ -247,6 +247,18 @@ def text_mask(text, height, width, font="sans", gap=1, bitmap=False, bold=0):
     return [[int(bool(p)) for p in r] for r in rows]
 
 
+def shear_mask(m, slope):
+    """Each column moved up slope px per px to the right (whole pixels, so strokes stay crisp)."""
+    h, w = len(m), len(m[0])
+    lift = [round(x * slope) for x in range(w)]
+    top = max(lift)
+    out = [[0] * w for _ in range(h + top)]
+    for y in range(h):
+        for x in range(w):
+            out[y + top - lift[x]][x] = m[y][x]
+    return out
+
+
 def draw(canvas, e, tex=None):
     """Paint edit e on canvas (rows of indices, the rect): erase the Japanese, then the English lines.
     tex(x, y): the background pixel at canvas (x, y) (edit key "tex": a clean patch of a periodic texture)."""
@@ -286,6 +298,8 @@ def draw(canvas, e, tex=None):
     cap = e.get("cap") or (h - 2 * pad - (len(lines) - 1) * e.get("lead", 2)) // len(lines) - 2 * bool(e.get("edge"))
     masks = [text_mask(t, cap, w - 2 * pad - 2 * bool(e.get("edge")), e.get("font", "sans"), e.get("gap", 1),
                        e.get("bitmap", False), e.get("bold", 0)) for t in lines]
+    if e.get("shear"):  # text on a slanted sign
+        masks = [shear_mask(m, e["shear"]) for m in masks]
     total = sum(len(m) for m in masks) + (len(lines) - 1) * e.get("lead", 2)
     y0 = (h - total) // 2 + e.get("dy", 0)
     for m in masks:

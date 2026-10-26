@@ -11,6 +11,7 @@ B050-B07B    quiz pause plate map stream (font.py PLATES)
 38003-3800E   resource table entries 1-4 (engine 1 font)
 38066-3806B   resource table entries 34-35 (engine 2 font)
 391DB-3CE88   resources 1-4: engine 1 font, recompressed in place
+51BA8-53376   resource 21: story opening road picture, かまくら sign (G21)
 5A6F3-5C326   resource 27: title logo (G1)
 63A55-6654B   resources 34-35: engine 2 font, recompressed in place
 38000-380F8   resource table, for a graphics resource that moves to free space (tools/gfx.py)

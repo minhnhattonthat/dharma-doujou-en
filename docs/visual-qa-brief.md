@@ -34,7 +34,8 @@ Standing non-bugs, `ok`:
 - the credits and the title's PRESS START / (c) METRO line were already English in the original;
 - the gold "DHARMA" above the big "DOJO" title logo is the original's own lettering (title = "Dharma Dojo");
 - "Novice Q 1" style quiz headers (rank, then the problem number at a fixed column; D10);
-- the versus record's W / L labels (D10).
+- the versus record's W / L labels (D10);
+- the red 千両 on the treasure-chest puzzle piece is kept as piece art (D11).
 
 ## Verdicts
 Write your verdict file once you have read every sheet, one line per id in the chunk:

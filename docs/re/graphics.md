@@ -38,7 +38,7 @@ that shows it (add `--hold N --mash 60 --shot-every 60` for scenes that come aft
 | G9 | Rank certificate / mastery | 免許 皆伝 plates | res 78 | seen | quiz_master |
 | G10 | Bottom-right rank plate | 入門 1 | engine-2 strings 52-56 (rank ligatures, font.py) | EN | quiz_play, quiz_lv2-5 |
 | G11 | Stage names (story) | 鎌倉 箱根 浜松 伊勢 滋賀 奈良 大阪 京都 24x24 wood-plate kanji | res 36 | unused: every stage card and plate in the warps (STAGE n-1, FINAL-STAGE) is text or English already | stage2-8 + hold |
-| G12 | Stack warning | 積み上がり注意!! banner (OBJ, res 8 is decoded to WRAM at boot and DMA'd on demand) | res 8 | not reached: story mode never adds pieces; training tops out under the crow's drops with no banner | - |
+| G12 | Stack warning | 積み上がり注意!! banner, BG1 at the top, blinks while the stack is high (training) | res 8 tiles 50-7D (decoded to WRAM $7F:0000 at boot; DMA table $83:C663 entries 1 / 2A copy $7F:0A00 at play start) | EN | training_crow (EN build, A mashed: the run is input-timed) |
 | G13 | 2P battle | 一 三 本 勝 負 (best of 1/3), 勝利 (victory) | res 63, res 77 | seen (三本勝負, 1P 勝利) | versus_play, versus_win |
 | G14 | Attract / demo | 1995年2月発売予定 ("on sale Feb 1995") | res 67 | unused: never decoded by either loader in any of the warps, title + attract held 12,000 frames (reslog.lua) | - |
 | G15 | Credits | romaji names (English already) | engine-1 strings 57-90 | text | credits |
@@ -46,5 +46,7 @@ that shows it (add `--hold N --mash 60 --shot-every 60` for scenes that come aft
 | G17 | 2P match record | 対戦成績 header; つづける / やめる = msg 56 (text) and win counts = msg 37 (text) | res 80 | EN | versus_win + hold |
 | G18 | Quiz certificate | body = msg 30 + rank names msg 31-35 (text); たいへん よくできました seal stamp | res 66 (OBJ) | EN | quiz_break |
 | G19 | Round start | よーい / どん call | raw OBJ tiles 0xCA000 / 0xCA800 | EN | stage1_moves |
+| G21 | Story opening picture | slanted road sign かまくら | res 21 (BG1 pal 2) | EN (sheared text) | story_intro |
+| G22 | Puzzle piece | 千両 on the treasure-chest piece | piece graphics | kept (D11) | stage2 |
 | G20 | Time running low | HURRY UP 急げ HURRY UP banner with crows | res 13 (OBJ) | EN | stage1_hurry |
 Also in ROM: res 31 holds a full Latin 8x8 font (A-Z, a-z), and res 25/59 small English HUD letters.
