@@ -9,6 +9,18 @@ no game data you can play; you need your own dump of the Japanese game.
 **Found a bug?** [Report it](../../issues/new/choose): untranslated text, typos, overflow, crashes. Attaching a savestate
 helps most.
 
+## Translation status
+
+| Part | Status |
+|---|---|
+| Dialogue / story scenes | Translated |
+| Menus and tutorial | Translated |
+| Quiz questions | Translated |
+| Title logo, banners, HUD, pause plates, certificates | Translated (small 千両 label on the treasure-chest piece kept, part of its picture) |
+| Credits | Translated |
+
+Known issues: none known; [report one](../../issues/new/choose).
+
 ## What's here
 
 | Path | What it is |
